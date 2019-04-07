@@ -1,4 +1,3 @@
-<?php /* /home/no_tenkz/Web/inventory/resources/views/includes/head.blade.php */ ?>
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
 <title>RSUP Inventory - <?php echo $__env->yieldContent('title'); ?></title>

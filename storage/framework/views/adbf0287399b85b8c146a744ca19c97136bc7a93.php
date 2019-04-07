@@ -1,4 +1,3 @@
-<?php /* /home/no_tenkz/Web/inventory/resources/views/includes/footer.blade.php */ ?>
 <footer class="footer">
     <div class="container">
         <div class="copyright mx-auto">

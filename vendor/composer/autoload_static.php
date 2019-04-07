@@ -360,6 +360,7 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
     );
 
     public static $classMap = array (
+        'App\\Bumbu' => __DIR__ . '/../..' . '/app/Bumbu.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

@@ -1,4 +1,3 @@
-<?php /* /home/no_tenkz/Web/inventory/resources/views/includes/foot.blade.php */ ?>
 <!--   Core JS Files   -->
 <script src="<?php echo e(asset('js/core/jquery.3.2.1.min.js')); ?>"></script>
 <script src="<?php echo e(asset('js/core/popper.min.js')); ?>"></script>

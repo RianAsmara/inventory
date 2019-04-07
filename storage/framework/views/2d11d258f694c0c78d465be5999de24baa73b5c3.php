@@ -1,4 +1,3 @@
-<?php /* /home/no_tenkz/Web/inventory/resources/views/includes/header.blade.php */ ?>
 <div class="main-header" data-background-color="light-blue2">
     <div class="nav-top">
         <div class="container d-flex flex-row">

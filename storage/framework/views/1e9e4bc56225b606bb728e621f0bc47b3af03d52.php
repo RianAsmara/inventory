@@ -1,4 +1,3 @@
-<?php /* /home/no_tenkz/Web/inventory/resources/views/layouts/index.blade.php */ ?>
 <!DOCTYPE html>
 <html lang="en">
 
