@@ -38,3 +38,6 @@ Route::prefix('checkout')->group(function () {
     // Route::get('/bumbu/update/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
     // Route::get('/bumbu/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
 });
+
+Route::get('laporan-pdf', 'HomeController@generatePDF')->name('cetak');
+// Route::get('/pdf', 'YourController@pdfStream')->name('pdfStream');

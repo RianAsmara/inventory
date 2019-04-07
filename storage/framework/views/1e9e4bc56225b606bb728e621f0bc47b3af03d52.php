@@ -16,6 +16,7 @@
 
         <div class="main-panel">
             <div class="content">
+                    <a href="<?php echo e(route("cetak")); ?>" target="_blank" > click me to pdf </a>
                 <section class="section">
                     <?php echo $__env->yieldContent('content'); ?>
                 </section>

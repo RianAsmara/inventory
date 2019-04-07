@@ -16,6 +16,7 @@
 
         <div class="main-panel">
             <div class="content">
+                    <a href="{{route("cetak")}}" target="_blank" > click me to pdf </a>
                 <section class="section">
                     @yield('content')
                 </section>
