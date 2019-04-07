@@ -5,7 +5,7 @@
     <title>Hi</title>
     <style>
         table {
-            /* border-collapse: collapse; */
+            border-collapse: collapse;
             width: 100%;
         }
 
@@ -14,7 +14,7 @@
             border: 1px solid #000;
             /* text-align: left; */
             /* padding: 1px; */
-            font-size: 12px;
+            font-size: 14px;
         }
 
         /* body {
