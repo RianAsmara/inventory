@@ -19,6 +19,29 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group form-floating-label">
+                                <select class="form-control input-border-bottom" id="selectFloatingLabel" required="">
+                                    <option value="">&nbsp;</option>
+                                    <option>Januari</option>
+                                    <option>Februari</option>
+                                    <option>Maret</option>
+                                    <option>April</option>
+                                    <option>Mei</option>
+                                    <option>Juni</option>
+                                    <option>Juli</option>
+                                    <option>Agustus</option>
+                                    <option>September</option>
+                                    <option>Oktober</option>
+                                    <option>November</option>
+                                    <option>Desember</option>
+                                </select>
+                                <label for="selectFloatingLabel" class="placeholder">Lihat Data Berdasarkan
+                                    Bulan</label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
@@ -45,9 +68,12 @@
                                     <td>Table cell</td>
                                     <td>Table cell</td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-xs" title="Update Data"><i class="fa fa-pencil-alt"></i></a>
-                                        <a href="" class="btn btn-danger btn-xs" title="Hapus Data"><i class="fa fa-trash"></i></a>
-                                        <a href="" class="btn btn-primary btn-xs" title="Tambah Stok & Anggaran"><i class="fa fa-pencil-alt"></i></a>
+                                        <a href="" class="btn btn-success btn-xs" title="Update Data"><i
+                                                class="fa fa-pencil-alt"></i></a>
+                                        <a href="" class="btn btn-danger btn-xs" title="Hapus Data"><i
+                                                class="fa fa-trash"></i></a>
+                                        <a href="" class="btn btn-primary btn-xs" title="Tambah Stok & Anggaran"><i
+                                                class="fa fa-pencil-alt"></i></a>
                                     </td>
                                 </tr>
                             </tbody>

@@ -1,14 +1,15 @@
-<?php $__env->startSection('title','Data Makanan Kering'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.index')
+@section('title','Data Checkout')
+@section('content')
 <div class="page-inner">
     <div class="row">
         <div class="col">
             <div class="card p-3">
                 <div class="card-header">
                     <div class="card-head-row mb-1">
-                        <div class="card-title">Data Makanan Kering</div>
+                        <div class="card-title">Data Checkout</div>
                         <div class="card-tools">
-                            <a href="<?php echo e(route('makanan.create')); ?>"
+                            <a href="{{ route('checkout.create') }}"
                                 class="btn btn-info btn-border btn-round btn-sm mr-2">
                                 <span class="btn-label">
                                     <i class="fa fa-plus"></i>
@@ -22,7 +23,7 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="form-group form-floating-label">
-                                <select class="form-control input-border-bottom" id="selectFloatingLabel" required="">
+                                <select class="form-control input-border-bottom" required="">
                                     <option value="">&nbsp;</option>
                                     <option>Januari</option>
                                     <option>Februari</option>
@@ -37,7 +38,7 @@
                                     <option>November</option>
                                     <option>Desember</option>
                                 </select>
-                                <label for="selectFloatingLabel" class="placeholder">Lihat Data Berdasarkan</label>
+                                <labelclass="placeholder">Lihat Data Berdasarkan</label>
                             </div>
                         </div>
                     </div>
@@ -46,13 +47,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Tanggal Masuk</th>
-                                    <th>Kode Bahan Makanan</th>
-                                    <th>Anggaran</th>
-                                    <th>Supplier</th>
-                                    <th>Nama Bahan Makanan</th>
-                                    <th>Stok</th>
-                                    <th>Satuan</th>
+                                    <th>Kode Checkout</th>
+                                    <th>Tanggal Pakai</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -61,18 +57,9 @@
                                     <th scope="row">1</th>
                                     <td>Table cell</td>
                                     <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-xs" title="Update Data"><i
-                                                class="fa fa-pencil-alt"></i></a>
-                                        <a href="" class="btn btn-danger btn-xs" title="Hapus Data"><i
-                                                class="fa fa-trash"></i></a>
-                                        <a href="" class="btn btn-primary btn-xs" title="Tambah Stok & Anggaran"><i
-                                                class="fa fa-pencil-alt"></i></a>
+                                        <a href="" class="btn btn-success btn-xs" title="Detail Checkout"><i
+                                                class="fa fa-eye"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -83,6 +70,4 @@
         </div>
     </div>
 </div>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+@endsection

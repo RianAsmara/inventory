@@ -361,6 +361,7 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
 
     public static $classMap = array (
         'App\\Bumbu' => __DIR__ . '/../..' . '/app/Bumbu.php',
+        'App\\Checkout' => __DIR__ . '/../..' . '/app/Checkout.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -368,6 +369,8 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\Bumbu\\BumbuController' => __DIR__ . '/../..' . '/app/Http/Controllers/Bumbu/BumbuController.php',
+        'App\\Http\\Controllers\\Checkout\\CheckoutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Checkout/CheckoutController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Makanan\\MakananController' => __DIR__ . '/../..' . '/app/Http/Controllers/Makanan/MakananController.php',

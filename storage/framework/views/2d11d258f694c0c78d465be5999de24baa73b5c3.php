@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?php echo e(route('checkout.index')); ?>">
                         <i class="link-icon icon-screen-desktop"></i>
                         <span class="menu-title">Checkout</span>
                     </a>

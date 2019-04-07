@@ -25,7 +25,15 @@ Route::prefix('makanan')->group(function () {
 
 Route::prefix('bumbu')->group(function () {
     Route::get('/bumbu', 'Bumbu\BumbuController@index')->name('bumbu.index');
-    Route::get('/bumbu/create', 'Bumbu\BumbuController@create')->name('bumbu.create');
+    Route::get('/bumbu/add', 'Bumbu\BumbuController@create')->name('bumbu.create');
+    // Route::get('/bumbu/edit/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+    // Route::get('/bumbu/update/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+    // Route::get('/bumbu/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+});
+
+Route::prefix('checkout')->group(function () {
+    Route::get('/checkout', 'Checkout\CheckoutController@index')->name('checkout.index');
+    Route::get('/checkout/add', 'Checkout\CheckoutController@create')->name('checkout.create');
     // Route::get('/bumbu/edit/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
     // Route::get('/bumbu/update/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
     // Route::get('/bumbu/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
