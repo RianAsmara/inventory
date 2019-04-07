@@ -46,9 +46,7 @@
                             <li>
                                 <a href="<?php echo e(route('makanan.index')); ?>">Makanan Kering</a>
                             </li>
-                            <li>
-                                <a href="<?php echo e(route('bumbu.index')); ?>">Bumbu Kering</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </li>

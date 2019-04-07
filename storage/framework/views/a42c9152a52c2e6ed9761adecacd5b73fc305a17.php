@@ -20,10 +20,11 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="form-group form-floating-label">
-                                <select class="form-control input-border-bottom" id="selectFloatingLabel" required="">
-                                    <option value="">&nbsp;</option>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                    <label>Lihat Data Berdasarkan Bulan</label>
+                                <select class="form-control" required="">
+                                    <option value="">Pilih Bulan</option>
                                     <option>Januari</option>
                                     <option>Februari</option>
                                     <option>Maret</option>
@@ -37,15 +38,35 @@
                                     <option>November</option>
                                     <option>Desember</option>
                                 </select>
-                                <label for="selectFloatingLabel" class="placeholder">Lihat Data Berdasarkan</label>
                             </div>
                         </div>
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Cetak Laporan Berdasarkan Bulan</label>
+                                    <select class="form-control" required="">
+                                        <option value="">Pilih Bulan</option>
+                                        <option>Januari</option>
+                                        <option>Februari</option>
+                                        <option>Maret</option>
+                                        <option>April</option>
+                                        <option>Mei</option>
+                                        <option>Juni</option>
+                                        <option>Juli</option>
+                                        <option>Agustus</option>
+                                        <option>September</option>
+                                        <option>Oktober</option>
+                                        <option>November</option>
+                                        <option>Desember</option>
+                                    </select>
+                                </div>
+                            </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
+                        <table class="table table-bordered-bd-default">
+                            <thead class="text-center">
                                 <tr>
-                                    <th>#</th>
+                                    <th>No</th>
                                     <th>Tanggal Masuk</th>
                                     <th>Kode Bahan Makanan</th>
                                     <th>Anggaran</th>
@@ -56,7 +77,7 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Table cell</td>

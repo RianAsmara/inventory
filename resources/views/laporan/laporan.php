@@ -64,8 +64,8 @@
 <body>
     <!-- <page size="A3"> -->
     <div class="row">
-        <h5>DAFTAR : LAPORAN PENGELUARAN BAHAN MAKANAN KERING INSTALASI GIZI</h5>
-        <h5>BULAN : DESEMBER 2018</h5>
+        <h4>DAFTAR : LAPORAN PENGELUARAN BAHAN MAKANAN KERING INSTALASI GIZI</h4>
+        <h4>BULAN : DESEMBER 2018</h4>
     </div>
     <div class="row">
         <table border="1" width="100%">
