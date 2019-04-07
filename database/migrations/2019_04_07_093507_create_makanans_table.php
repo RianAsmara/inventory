@@ -20,8 +20,8 @@ class CreateMakanansTable extends Migration
             $table->double('anggaran');
             $table->string('nama-makanan');
             $table->string('kategori');
-            $table->int('stok');
-            $table->int('stok-akhir');
+            $table->integer('stok');
+            $table->integer('stok-akhir');
             $table->string('satuan');
             $table->timestamps();
         });
