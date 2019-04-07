@@ -11,19 +11,19 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="form-group">
                         <label>Nama Supplier</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="namaSupplier">
                     </div>
                     <div class="form-group">
                         <label>Anggaran</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="anggaran">
                     </div>
                     <div class="form-group">
                         <label>Nama Bahan Makanan</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="namaMakanan">
                     </div>
                     <div class="form-group">
                         <label>Kategori Makanan</label>
-                        <select class="form-control">
+                        <select class="form-control" name="kategori">
                             <option>A - </option>
                         </select>
                     </div>
@@ -42,11 +42,11 @@
                     </div>
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="number" class="form-control">
+                        <input type="number" class="form-control" name="stok">
                     </div>
                     <div class="form-group">
                         <label>Satuan</label>
-                        <select class="form-control">
+                        <select class="form-control" name="satuan">
                             <option>Kg</option>
                             <option>Kaleng</option>
                             <option>Bungkus</option>
