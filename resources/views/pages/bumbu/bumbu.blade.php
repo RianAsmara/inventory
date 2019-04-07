@@ -1,14 +1,15 @@
-<?php $__env->startSection('title','Data Makanan Kering'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.index')
+@section('title','Data Bumbuartisan make:controller Kering')
+@section('content')
 <div class="page-inner">
     <div class="row">
         <div class="col">
             <div class="card p-3">
                 <div class="card-header">
                     <div class="card-head-row">
-                        <div class="card-title">Data Makanan Kering</div>
+                        <div class="card-title">Data Bumbu Kering</div>
                         <div class="card-tools">
-                            <a href="<?php echo e(route('makanan.create')); ?>" class="btn btn-info btn-border btn-round btn-sm mr-2">
+                            <a href="{{ route('bumbu.create') }}" class="btn btn-info btn-border btn-round btn-sm mr-2">
                                 <span class="btn-label">
                                     <i class="fa fa-plus"></i>
                                 </span>
@@ -24,10 +25,10 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Tanggal Masuk</th>
-                                    <th>Kode Bahan Makanan</th>
+                                    <th>Kode Bumbu</th>
                                     <th>Anggaran</th>
                                     <th>Supplier</th>
-                                    <th>Nama Bahan Makanan</th>
+                                    <th>Nama Bumbu</th>
                                     <th>Stok</th>
                                     <th>Satuan</th>
                                     <th>Aksi</th>
@@ -57,6 +58,4 @@
         </div>
     </div>
 </div>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+@endsection

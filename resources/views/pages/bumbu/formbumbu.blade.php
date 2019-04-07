@@ -1,9 +1,10 @@
-<?php $__env->startSection('title','Form Makanan Kering'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.index')
+@section('title','Form Bumbu Kering')
+@section('content')
 <div class="col">
     <div class="card">
         <div class="card-header">
-            <div class="card-title">Form Makanan Kering</div>
+            <div class="card-title">Form Bumbu Kering</div>
         </div>
         <div class="card-body">
             <div class="row">
@@ -17,11 +18,11 @@
                         <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Nama Bahan Makanan</label>
+                        <label>Nama Bumbu</label>
                         <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Kategori Makanan</label>
+                        <label>Kategori Bumbu</label>
                         <select class="form-control">
                             <option>A - </option>
                         </select>
@@ -64,6 +65,4 @@
         </div>
     </div>
 </div>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.index', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+@endsection

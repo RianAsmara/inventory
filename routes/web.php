@@ -23,10 +23,10 @@ Route::prefix('makanan')->group(function () {
     // Route::get('/makanan/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
 });
 
-// Route::prefix('bumbu')->group(function () {
-//     Route::get('/bumbu', 'Makanan\MakananController@index')->name('makanan.index');
-//     Route::get('/bumbu/create', 'Makanan\MakananController@index')->name('makanan.index');
-//     Route::get('/bumbu/edit/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
-//     Route::get('/bumbu/update/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
-//     Route::get('/bumbu/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
-// });
+Route::prefix('bumbu')->group(function () {
+    Route::get('/bumbu', 'Bumbu\BumbuController@index')->name('bumbu.index');
+    Route::get('/bumbu/create', 'Bumbu\BumbuController@create')->name('bumbu.create');
+    // Route::get('/bumbu/edit/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+    // Route::get('/bumbu/update/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+    // Route::get('/bumbu/delete/{makanan}', 'Makanan\MakananController@index')->name('makanan.index');
+});

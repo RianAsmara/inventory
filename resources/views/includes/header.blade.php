@@ -79,7 +79,7 @@
                                 <a href="{{ route('makanan.index') }}">Makanan Kering</a>
                             </li>
                             <li>
-                                <a href="../demo1/index.html">Bumbu Kering</a>
+                                <a href="{{ route('bumbu.index') }}">Bumbu Kering</a>
                             </li>
                         </ul>
                     </div>
