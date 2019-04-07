@@ -9,7 +9,7 @@
             </button>
             <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
             <!-- Logo Header -->
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="<?php echo e(url('/')); ?>" class="logo d-flex align-items-center">
                 <img src="<?php echo e(asset('img/logo.svg')); ?>" alt="navbar brand" class="navbar-brand">
             </a>
             <!-- End Logo Header -->
@@ -31,7 +31,7 @@
             <ul class="nav page-navigation page-navigation-info">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="<?php echo e(url('/')); ?>">
                         <i class="link-icon icon-screen-desktop"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>

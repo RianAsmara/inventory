@@ -38,7 +38,7 @@
                                     <option>November</option>
                                     <option>Desember</option>
                                 </select>
-                                <labelclass="placeholder">Lihat Data Berdasarkan</label>
+                                <label class="placeholder">Lihat Data Berdasarkan</label>
                             </div>
                         </div>
                     </div>
