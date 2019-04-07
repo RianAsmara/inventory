@@ -24,7 +24,11 @@
                     <div class="form-group">
                         <label>Kategori Makanan</label>
                         <select class="form-control" name="kategori">
-                            <option>A - </option>
+                            <option value="">A - Beras/Ketan/Mie/Jagung DLL</option>
+                            <option value="">B - Gula/Teh/Kopi/Sirup DLL</option>
+                            <option value="">C - Minuman/Susu DLL</option>
+                            <option value="">D - Plastik Roll/Plastik/Kantong Plastik/Sedotan Plastik DLL</option>
+                            <option value="">E - Minyak Goreng/Mentega DLL</option>
                         </select>
                     </div>
                 </div>

@@ -11,10 +11,10 @@
 
         td,
         th {
-            border: 1px solid #dddddd;
+            border: 1px solid #000;
             /* text-align: left; */
             /* padding: 1px; */
-            font-size: 14px;
+            font-size: 12px;
         }
 
         /* body {
@@ -70,15 +70,17 @@
     <div class="row">
         <table border="1" width="100%">
             <tr style="text-align:center">
-                <td rowspan="2">No</td>
-                <td rowspan="2">Bahan</td>
-                <td rowspan="2">Satuan</td>
-                <td rowspan="2">Sisa Bln Lalu</td>
-                <td rowspan="2">Penerimaan Bln Ini</td>
-                <td colspan="10" style="text-align:center">Tanggal</td>
-                <td rowspan="2">Jumlah</td>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Bahan</th>
+                <th rowspan="2">Sat.</th>
+                <th rowspan="2">Sisa Bln Lalu</th>
+                <th rowspan="2">Penerimaan Bln Ini</th>
+                <th colspan="31" style="text-align:center">Tanggal</th>
+                <th rowspan="2">Jml</th>
+                <th rowspan="2">Jml Pakai</th>
+                <th rowspan="2">Sisa</th>
             </tr>
-            <tr style="text-align:center">
+            <tr style="text-align:center; font-weight: bold;">
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -89,9 +91,30 @@
                 <td>8</td>
                 <td>9</td>
                 <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
             </tr>
             <tr>
-                <td colspan="18" style="background: #e7eaf6;">A. Kategori Makanan</td>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">A. Beras/Ketan/Mie/Jagung DLL</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -109,7 +132,440 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Beras</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Terigu</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Tapioka</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Maizena</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Roti</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Baking Powder</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Tepung Agar Agar</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Mie Instan</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Kerupuk Udang Kecil</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Bks</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -127,7 +583,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -145,7 +624,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -163,7 +665,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -181,7 +706,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -199,7 +747,33 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <!-- <tr>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">B. Gula/Teh/Kopi/Sirup</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -217,7 +791,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -235,7 +832,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -253,7 +873,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -271,7 +914,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -289,7 +955,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -307,7 +996,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -325,7 +1037,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -343,7 +1078,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -361,7 +1119,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -379,10 +1160,33 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td colspan="18" style="background: #e7eaf6;">B. Kategori Makanan</td>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">C. Minuman/Susu DLL</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -400,7 +1204,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -418,7 +1245,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -436,7 +1286,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -454,7 +1327,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -472,7 +1368,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -490,7 +1409,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -508,7 +1450,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -526,7 +1491,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -544,7 +1532,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -562,10 +1573,648 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+            <tr style="text-align:center">
+                <td>1</td>
+                <td>Beras C4</td>
+                <td>Kg</td>
+                <td>320</td>
+                <td>2500</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td colspan="18" style="background: #e7eaf6;">B. Kategori Makanan</td>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">D. Plastik Roll/Plastik/Kantong Plastik/Sedotan Plastik DLL</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -583,7 +2232,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -601,7 +2273,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -619,7 +2314,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -637,7 +2355,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -655,7 +2396,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -673,7 +2437,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -691,7 +2478,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -709,7 +2519,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -727,7 +2560,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -745,7 +2601,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -763,7 +2642,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -781,7 +2683,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -799,7 +2724,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -817,7 +2765,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -835,7 +2806,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -853,7 +2847,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -871,7 +2888,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -889,7 +2929,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -907,7 +2970,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -925,7 +3011,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -943,14 +3052,6 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
-            </tr>
-            <tr style="text-align:center">
-                <td>1</td>
-                <td>Beras C4</td>
-                <td>Kg</td>
-                <td>320</td>
-                <td>2500</td>
                 <td>11</td>
                 <td>22</td>
                 <td>33</td>
@@ -961,14 +3062,6 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
-            </tr>
-            <tr style="text-align:center">
-                <td>1</td>
-                <td>Beras C4</td>
-                <td>Kg</td>
-                <td>320</td>
-                <td>2500</td>
                 <td>11</td>
                 <td>22</td>
                 <td>33</td>
@@ -979,46 +3072,13 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
-            </tr>
-            <tr style="text-align:center">
-                <td>1</td>
-                <td>Beras C4</td>
-                <td>Kg</td>
-                <td>320</td>
-                <td>2500</td>
-                <td>11</td>
-                <td>22</td>
-                <td>33</td>
-                <td>44</td>
-                <td>55</td>
-                <td>66</td>
-                <td>77</td>
-                <td>88</td>
-                <td>99</td>
                 <td>100</td>
-                <td></td>
-            </tr>
-            <tr style="text-align:center">
-                <td>1</td>
-                <td>Beras C4</td>
-                <td>Kg</td>
-                <td>320</td>
-                <td>2500</td>
                 <td>11</td>
-                <td>22</td>
-                <td>33</td>
-                <td>44</td>
-                <td>55</td>
-                <td>66</td>
-                <td>77</td>
-                <td>88</td>
-                <td>99</td>
-                <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td colspan="18" style="background: #e7eaf6;">B. Kategori Makanan</td>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">E. Minyak Goreng/Mentega DLL</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -1036,7 +3096,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -1054,7 +3137,30 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
             </tr>
             <tr style="text-align:center">
                 <td>1</td>
@@ -1072,8 +3178,31 @@
                 <td>88</td>
                 <td>99</td>
                 <td>100</td>
-                <td></td>
-            </tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77</td>
+                <td>88</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>11</td>
+                <td>11</td>
+                <td>11</td>
+            </tr> -->
         </table>
     </div>
     <!-- </page> -->
