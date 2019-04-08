@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
-                                    <label>Lihat Data Berdasarkan Bulan</label>
+                                    <label>Lihat Data Bulan</label>
                                 <select class="form-control" required="">
                                     <option value="">Pilih Bulan</option>
                                     <option>Januari</option>
@@ -44,21 +44,13 @@
                         <div class="col-lg-4"></div>
                         <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Cetak Laporan Berdasarkan Bulan</label>
+                                    <label>Cetak Laporan Per Triwulan</label>
                                     <select class="form-control" required="">
                                         <option value="">Pilih Bulan</option>
-                                        <option>Januari</option>
-                                        <option>Februari</option>
-                                        <option>Maret</option>
-                                        <option>April</option>
-                                        <option>Mei</option>
-                                        <option>Juni</option>
-                                        <option>Juli</option>
-                                        <option>Agustus</option>
-                                        <option>September</option>
-                                        <option>Oktober</option>
-                                        <option>November</option>
-                                        <option>Desember</option>
+                                        <option>Triwulan I</option>
+                                        <option>Triwulan II</option>
+                                        <option>Triwulan III</option>
+                                        <option>Triwulan IV</option>
                                     </select>
                                 </div>
                             </div>
