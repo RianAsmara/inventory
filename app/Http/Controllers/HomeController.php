@@ -33,7 +33,7 @@ class HomeController extends Controller
         $data = ['title' => 'Welcome to belajarphp.net'];
 
         $pdf = PDF::loadView('/laporan/laporan', $data)
-            ->setPaper('legal', 'portrait');
+            ->setPaper('legal', 'landscape');
         // return $pdf->download('laporan-pdf.pdf');
         return $pdf->stream();
         // return view('./laporan/laporan');
