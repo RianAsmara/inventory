@@ -1,4 +1,4 @@
-<?php $__env->startSection('title','Data Makanan Kering'); ?>
+<?php $__env->startSection('title','Data MakananController Kering'); ?>
 <?php $__env->startSection('content'); ?>
 <div class="page-inner">
     <div class="row">

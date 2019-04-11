@@ -1,4 +1,4 @@
-<?php $__env->startSection('title','Form Makanan Kering'); ?>
+<?php $__env->startSection('title','Form MakananController Kering'); ?>
 <?php $__env->startSection('content'); ?>
 <div class="col">
     <div class="card">

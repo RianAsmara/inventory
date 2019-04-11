@@ -78,18 +78,29 @@
                             <li>
                                 <a href="{{ route('makanan.index') }}">Makanan Kering</a>
                             </li>
-                            {{--  <li>
+                              <li>
                                 <a href="{{ route('bumbu.index') }}">Bumbu Kering</a>
-                            </li>  --}}
+                            </li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('checkout.index') }}">
+                <li class="nav-item submenu">
+                    <a class="nav-link" href="#">
                         <i class="link-icon icon-screen-desktop"></i>
-                        <span class="menu-title">Checkout</span>
+                        <span class="menu-title">Proses Transaksi</span>
                     </a>
+                    <div class="navbar-dropdown animated fadeIn">
+                        <ul>
+                            <li>
+                                <a href="{{ route('penerimaan.index') }}">Penerimaan Barang</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('bumbu.index') }}">Checkout Barang</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+
             </ul>
         </div>
     </div>
