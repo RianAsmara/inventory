@@ -20,30 +20,52 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="form-group form-floating-label">
-                                <select class="form-control input-border-bottom" required="">
-                                    <option value="">&nbsp;</option>
-                                    <option>Januari</option>
-                                    <option>Februari</option>
-                                    <option>Maret</option>
-                                    <option>April</option>
-                                    <option>Mei</option>
-                                    <option>Juni</option>
-                                    <option>Juli</option>
-                                    <option>Agustus</option>
-                                    <option>September</option>
-                                    <option>Oktober</option>
-                                    <option>November</option>
-                                    <option>Desember</option>
-                                </select>
-                                <label class="placeholder">Lihat Data Berdasarkan</label>
+                    <div class="card-sub">
+                        <div class="row">
+                            <div class="col-md-7 col-xs-12">
+                                <div class="form-group form-inline" style="text-align: left">
+                                    <label for="inlineinput" class="col-md-1 col-form-label p-0">Filter :</label>
+                                    <div class="col-md-4 p-0 pl-1 ">
+                                        <select class="form-control form-control-sm input-full" id="inlineinput">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 p-0 pl-1">
+                                        <select class="form-control form-control-sm input-full" id="inlineinput">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 col-xs-12 p-0 pl-1">
+                                        <button class="btn btn-outline-info btn-xs btn-block" id="inlineinput">
+                                            <i class="fa fa-filter"></i>
+                                            Filter
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-xs-12">
+                                <div class="form-group">
+                                    <div class="input-icon">
+                                        <input type="text" class="form-control form-control-sm"
+                                            placeholder="Search for...">
+                                        <span class="input-icon-addon">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-head-bg-primary mt-4">
                             <thead>
                                 <tr>
                                     <th>#</th>

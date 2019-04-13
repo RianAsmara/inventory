@@ -8,61 +8,116 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-6 col-lg-6">
+                <div class="col">
                     <div class="form-group">
-                        <label>Nama Supplier</label>
-                        <input type="text" class="form-control" name="namaSupplier">
-                    </div>
-                    <div class="form-group">
-                        <label>Anggaran</label>
-                        <input type="text" class="form-control" name="anggaran">
-                    </div>
-                    <div class="form-group">
-                        <label>Nama Bahan Makanan</label>
-                        <input type="text" class="form-control" name="namaMakanan">
-                    </div>
-                    <div class="form-group">
-                        <label>Kategori Makanan</label>
-                        <select class="form-control">
-                            <option>A - </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                    <div class="form-group">
-                        <label>Tanggal Masuk</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="datepicker" name="datepicker">
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="fa fa-calendar-check"></i>
-                                </span>
-                            </div>
+                        <label class="form-label">Jenis</label>
+                        <div class="selectgroup w-100">
+                            <label class="selectgroup-item">
+                                <input type="radio" name="jenis" id="jenis" value="makanan" class="selectgroup-input"
+                                    required>
+                                <span class="selectgroup-button"><i class="fa fa-cookie"></i> Makanan</span>
+                            </label>
+                            <label class="selectgroup-item">
+                                <input type="radio" name="jenis" id="jenis" value="bumbu" class="selectgroup-input"
+                                    required>
+                                <span class="selectgroup-button"><i class="fa fa-bong"></i> Bumbu</span>
+                            </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Stok</label>
-                        <input type="number" class="form-control">
+                        <label>Pilih Bahan</label>
+                        <div class="select2-input">
+                            <select id="basic" name="master_barang_id" class="form-control" disabled required>
+
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label>Satuan</label>
-                        <select class="form-control">
-                            <option>Kg</option>
-                            <option>Kaleng</option>
-                            <option>Bungkus</option>
-                            <option>Botol</option>
-                            <option>Gelas</option>
-                            <option>Kotak</option>
-                            <option>Galon</option>
-                        </select>
+                        <label>Jumlah</label>
+                        <input type="number" class="form-control" name="jumlah" required>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card-footer">
-            <a href="" class="btn btn-success btn-sm">Simpan</a>
+            <a href="" class="btn btn-success btn-sm">Tambah Ke Keranjang</a>
             <a href="" class="btn btn-danger btn-sm">Reset</a>
         </div>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-head-bg-primary mt-4">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nama Bahan Makanan</th>
+                            <th>Jumlah Pakai</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>
+                                <a href=""
+                                    onclick="return confirm('Apakah Anda yakin ingin menghapus data makanan ini?')"
+                                    class="btn btn-danger btn-xs" title="Hapus Data"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="" class="btn btn-success btn-sm">Simpan</a>
+        </div>
+    </div>
 </div>
+@endsection
+
+@section('inline-js')
+<script type="text/javascript">
+    $('#datepicker').datetimepicker({
+        format: 'DD/MM/YYYY',
+    });
+    $('#basic').select2({
+        theme: "bootstrap"
+    });
+
+    $(document).ready(function () {
+        var selectHtml = '';
+        $('.selectgroup input[type=radio]').on('click', function () {
+            selectHtml = '';
+            var radioValue = $("input[name='jenis']:checked").val();
+            if (radioValue) {
+                $.ajax({
+                    dataType: 'JSON',
+                    type: 'GET',
+                    url: '{{URL::to(' / penerimaan / get - barang / ')}}' + '/' + radioValue,
+                    beforeSend: function () {
+                        $('#basic').prop('disabled', true);
+                        $('#basic').html(
+                            '<option value="" selected disabled>Loading...</option>');
+                    },
+                }).done(function (data) {
+                    $('#basic').html('');
+                    selectHtml = '<option value="" selected disabled>Pilih Bahan</option>';
+                    for (i = 0; i < data.length; i++) {
+                        selectHtml += '<option value="' + data[i].id + '">' + data[i]
+                            .nama_barang + ' (' + data[i].satuan + ')</option>';
+                    }
+                    $('#basic').prop('disabled', false);
+                    $('#basic').append(selectHtml);
+                })
+            }
+        });
+
+
+    })
+
+</script>
+
 @endsection

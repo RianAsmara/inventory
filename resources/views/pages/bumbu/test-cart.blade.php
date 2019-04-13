@@ -98,17 +98,17 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="4">&nbsp;</td>
                                     <td>Subtotal</td>
                                     <td><?php echo Cart::subtotal(); ?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="4">&nbsp;</td>
                                     <td>Tax</td>
                                     <td><?php echo Cart::tax(); ?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">&nbsp;</td>
+                                    <td colspan="4">&nbsp;</td>
                                     <td>Total</td>
                                     <td><?php echo Cart::total(); ?></td>
                                 </tr>

@@ -16,18 +16,15 @@
 
         <div class="main-panel">
             <div class="content">
-                    <a href="{{route("cetak")}}" target="_blank" > click me to pdf </a>
-                    <div id="tanggalan">
-
-                    </div>
-                <section class="section">
-                    @yield('content')
-                </section>
             </div>
+            <section class="section">
+                @yield('content')
+            </section>
         </div>
-        {{-- Footer --}}
-        @include('includes.footer')
-        {{-- End --}}
+    </div>
+    {{-- Footer --}}
+    @include('includes.footer')
+    {{-- End --}}
     </div>
     {{-- Foot --}}
     @include('includes.foot')

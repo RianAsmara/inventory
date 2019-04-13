@@ -95,7 +95,7 @@
                                 <a href="{{ route('penerimaan.index') }}">Penerimaan Barang</a>
                             </li>
                             <li>
-                                <a href="{{ route('bumbu.index') }}">Checkout Barang</a>
+                                <a href="{{ route('checkout.index') }}">Checkout Barang</a>
                             </li>
                         </ul>
                     </div>
