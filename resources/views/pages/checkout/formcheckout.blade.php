@@ -139,7 +139,7 @@
         }
 
         function deleteItem(row) {
-            
+
         }
 
     </script>
