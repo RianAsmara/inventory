@@ -105,4 +105,5 @@ class BumbuController extends Controller
         session()->put('success','Data bumbu berhasil dihapus.');
         return redirect()->route('bumbu.index');
     }
+
 }

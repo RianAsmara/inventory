@@ -15,6 +15,10 @@ Route::get('/', function () {
     return View::make('layouts/index');
 });
 
+Route::get('/cart', function () {
+    return view('pages.bumbu.test-cart');
+});
+
 Route::prefix('makanan')->group(function () {
     Route::get('', 'MasterBarang\MakananController@index')->name('makanan.index');
     Route::get('/add', 'MasterBarang\MakananController@create')->name('makanan.create');

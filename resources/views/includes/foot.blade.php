@@ -61,3 +61,15 @@
 
 @include('includes.notification')
 
+<script>
+    $(document).ready(function () {
+        $('#tanggalan').html(Intl.DateTimeFormat().resolvedOptions().timeZone);
+        var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+        var firstDay = new Date(y, m, 1);
+        var lastDay = new Date(y, m + 1, 0);
+
+        console.log(firstDay);
+        console.log(lastDay);
+
+    })
+</script>
