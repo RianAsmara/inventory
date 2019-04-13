@@ -14,7 +14,13 @@ class CreateMasterBarangsTable extends Migration
     public function up()
     {
         Schema::create('master_barangs', function (Blueprint $table) {
-            $table->renameColumn('anggran', 'anggaran');
+            $table->bigIncrements('id');
+            $table->string('kategori');
+            $table->string('nama_barang');
+            $table->string('satuan');
+            $table->string('stok');
+            $table->string('jenis');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +31,6 @@ class CreateMasterBarangsTable extends Migration
      */
     public function down()
     {
-        Schema::create('master_barangs', function (Blueprint $table) {
-            $table->renameColumn('anggaran', 'anggran');
-        });
+        Schema::dropIfExists('master_barangs');
     }
 }
