@@ -18,8 +18,8 @@ class CreateMasterBarangsTable extends Migration
             $table->string('kategori');
             $table->string('nama_barang');
             $table->string('satuan');
-            $table->string('stok');
-            $table->string('jenis');
+            $table->string('stok')->default(0);
+            $table->enum('jenis', ['makanan', 'bumbu']);
             $table->timestamps();
         });
     }
