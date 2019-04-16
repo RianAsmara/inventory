@@ -3,7 +3,7 @@
 
 <head>
     
-    <?php echo $__env->make('includes.head', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('includes.head', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     
 </head>
 
@@ -11,23 +11,23 @@
     <div class="wrapper horizontal-layout-2">
 
         
-        <?php echo $__env->make('includes.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('includes.header', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         
 
         <div class="main-panel">
             <div class="content">
-                    <a href="<?php echo e(route("cetak")); ?>" target="_blank" > click me to pdf </a>
-                <section class="section">
-                    <?php echo $__env->yieldContent('content'); ?>
-                </section>
             </div>
+            <section class="section">
+                <?php echo $__env->yieldContent('content'); ?>
+            </section>
         </div>
-        
-        <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        
     </div>
     
-    <?php echo $__env->make('includes.foot', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('includes.footer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+    </div>
+    
+    <?php echo $__env->make('includes.foot', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     
 </body>
 
