@@ -92,15 +92,20 @@
                     <div class="navbar-dropdown animated fadeIn">
                         <ul>
                             <li>
-                                <a href="{{ route('penerimaan.index') }}">Penerimaan Barang</a>
+                                <a href="{{ route('penerimaan.index') }}">Penerimaan</a>
                             </li>
                             <li>
-                                <a href="{{ route('checkout.index') }}">Checkout Barang</a>
+                                <a href="{{ route('checkout.index') }}">Checkout</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('cetak') }}">
+                        <i class="link-icon icon-printer"></i>
+                        <span class="menu-title">Cetak Laporan</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

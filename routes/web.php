@@ -42,9 +42,9 @@ Route::prefix('penerimaan')->group(function () {
     Route::get('/add', 'Penerimaan\PenerimaanController@create')->name('penerimaan.create');
     Route::post('/save', 'Penerimaan\PenerimaanController@store')->name('penerimaan.save');
     Route::get('get-barang/{barang}', 'Penerimaan\PenerimaanController@getBarang')->name('penerimaan.get-barang');
-//    Route::get('/edit/{penerimaan}', 'MasterBarang\BumbuController@edit')->name('bumbu.edit');
-//    Route::put('/update/{penerimaan}', 'MasterBarang\BumbuController@update')->name('bumbu.update');
-//    Route::get('/delete/{penerimaan}', 'MasterBarang\BumbuController@destroy')->name('bumbu.delete');
+    //    Route::get('/edit/{penerimaan}', 'MasterBarang\BumbuController@edit')->name('bumbu.edit');
+    //    Route::put('/update/{penerimaan}', 'MasterBarang\BumbuController@update')->name('bumbu.update');
+    //    Route::get('/delete/{penerimaan}', 'MasterBarang\BumbuController@destroy')->name('bumbu.delete');
 });
 
 Route::prefix('checkout')->group(function () {
@@ -55,5 +55,5 @@ Route::prefix('checkout')->group(function () {
     // Route::get('/bumbu/delete/{makanan}', 'MakananController\MakananController@index')->name('makanan.index');
 });
 
-Route::get('laporan-pdf', 'HomeController@generatePDF')->name('cetak');
+Route::get('laporan', 'HomeController@cetakLaporan')->name('cetak');
 // Route::get('/pdf', 'YourController@pdfStream')->name('pdfStream');
