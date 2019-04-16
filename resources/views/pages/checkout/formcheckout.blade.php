@@ -11,6 +11,17 @@
                     <div class="col">
                         <form action="#" id="haha">
                             <div class="form-group">
+                                <label>Tanggal Masuk</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="datepicker" name="tanggal_checkout">
+                                    <div class="input-group-append">
+										<span class="input-group-text">
+											<i class="fa fa-calendar-check"></i>
+										</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Jenis</label>
                                 <div class="selectgroup w-100">
                                     <label class="selectgroup-item">
@@ -75,9 +86,12 @@
 
 @section('inline-js')
     <script type="text/javascript">
-        $('#datepicker').datetimepicker({
-            format: 'DD/MM/YYYY',
-        });
+        $('#datepicker').datetimepicker(
+            {
+                format: 'DD/MM/YYYY',
+            },
+            'setDate', '15/11/2012',
+        );
         $('#basic').select2({
             theme: "bootstrap"
         });
@@ -122,12 +136,12 @@
             };
             checkout.push(tmp);
             var html = '';
-            for (var i=0; i<checkout.length; i++){
+            for (var i = 0; i < checkout.length; i++) {
                 html = '';
                 html += '<tr>\n' +
-                    '                            <td>'+(i+1)+'</td>\n' +
-                    '                            <td>'+checkout[i].nama_barang+'</td>\n' +
-                    '                            <td>'+checkout[i].jumlah+'</td>\n' +
+                    '                            <td>' + (i + 1) + '</td>\n' +
+                    '                            <td>' + checkout[i].nama_barang + '</td>\n' +
+                    '                            <td>' + checkout[i].jumlah + '</td>\n' +
                     '                            <td>\n' +
                     '                                <a href=""\n' +
                     '                                   onclick="return confirm(\'Apakah Anda yakin ingin menghapus data makanan ini?\')"\n' +
