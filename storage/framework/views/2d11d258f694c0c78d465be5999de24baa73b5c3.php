@@ -46,14 +46,32 @@
                             <li>
                                 <a href="<?php echo e(route('makanan.index')); ?>">Makanan Kering</a>
                             </li>
-                            
+                              <li>
+                                <a href="<?php echo e(route('bumbu.index')); ?>">Bumbu Kering</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item submenu">
+                    <a class="nav-link" href="#">
+                        <i class="link-icon icon-screen-desktop"></i>
+                        <span class="menu-title">Proses Transaksi</span>
+                    </a>
+                    <div class="navbar-dropdown animated fadeIn">
+                        <ul>
+                            <li>
+                                <a href="<?php echo e(route('penerimaan.index')); ?>">Penerimaan</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo e(route('checkout.index')); ?>">Checkout</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo e(route('checkout.index')); ?>">
-                        <i class="link-icon icon-screen-desktop"></i>
-                        <span class="menu-title">Checkout</span>
+                    <a class="nav-link" href="<?php echo e(url('cetak')); ?>">
+                        <i class="link-icon icon-printer"></i>
+                        <span class="menu-title">Cetak Laporan</span>
                     </a>
                 </li>
             </ul>

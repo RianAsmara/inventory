@@ -28,7 +28,7 @@ class HomeController extends Controller
     //     return view('home');
     // }
 
-    public function generatePDF()
+    public function cetakLaporan()
     {
         $data = ['title' => 'Welcome to belajarphp.net'];
 
