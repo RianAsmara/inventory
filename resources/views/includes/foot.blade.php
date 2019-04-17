@@ -13,18 +13,6 @@
 <!-- Moment JS -->
 <script src="{{asset('/js/plugin/moment/moment.min.js')}}"></script>
 
-<!-- Chart JS -->
-<script src="{{asset('/js/plugin/chart.js/chart.min.js')}}"></script>
-
-<!-- jQuery Sparkline -->
-<script src="{{asset('/js/plugin/jquery.sparkline/jquery.sparkline.min.js')}}"></script>
-
-<!-- Chart Circle -->
-<script src="{{asset('/js/plugin/chart-circle/circles.min.js')}}"></script>
-
-<!-- Datatables -->
-<script src="{{asset('/js/plugin/datatables/datatables.min.js')}}"></script>
-
 <!-- Bootstrap Notify -->
 <script src="{{asset('/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
 
@@ -34,19 +22,6 @@
 <!-- DateTimePicker -->
 <script src="{{asset('/js/plugin/datepicker/bootstrap-datetimepicker.min.js')}}"></script>
 
-<!-- Bootstrap Tagsinput -->
-<script src="{{asset('/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js')}}"></script>
-
-<!-- Bootstrap Wizard -->
-<script src="{{asset('/js/plugin/bootstrap-wizard/bootstrapwizard.js')}}"></script>
-
-<!-- jQuery Validation -->
-<script src="{{asset('/js/plugin/jquery.validate/jquery.validate.min.js')}}"></script>
-
-<!-- Summernote -->
-<script src="{{asset('/js/plugin/summernote/summernote-bs4.min.js')}}"></script>
-
-<!-- Select2 -->
 <script src="{{asset('/js/plugin/select2/select2.full.min.js')}}"></script>
 
 <!-- Sweet Alert -->

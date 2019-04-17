@@ -50,9 +50,8 @@ Route::prefix('penerimaan')->group(function () {
 Route::prefix('checkout')->group(function () {
     Route::get('/checkout', 'Checkout\CheckoutController@index')->name('checkout.index');
     Route::get('/checkout/add', 'Checkout\CheckoutController@create')->name('checkout.create');
-    // Route::get('/bumbu/edit/{makanan}', 'MakananController\MakananController@index')->name('makanan.index');
-    // Route::get('/bumbu/update/{makanan}', 'MakananController\MakananController@index')->name('makanan.index');
-    // Route::get('/bumbu/delete/{makanan}', 'MakananController\MakananController@index')->name('makanan.index');
+    Route::post('/checkout/save', 'Checkout\CheckoutController@store')->name('checkout.save');
+
 });
 
 Route::get('laporan', 'HomeController@cetakLaporan')->name('cetak');

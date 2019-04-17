@@ -11,4 +11,8 @@ class MasterBarang extends Model
     public function penerimaan(){
         return $this->hasMany(Penerimaan::class);
     }
+
+    public function checkout(){
+        return $this->hasMany(Checkout::class);
+    }
 }

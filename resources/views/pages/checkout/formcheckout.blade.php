@@ -9,54 +9,55 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <form action="#" id="haha">
-                            <div class="form-group">
-                                <label>Tanggal Masuk</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="datepicker" name="tanggal_checkout">
-                                    <div class="input-group-append">
+                        <div class="form-group">
+                            <label>Tanggal Masuk</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="datepicker" name="tanggal_checkout"
+                                       disabled value="{{date('d/m/Y')}}">
+                                <div class="input-group-append">
 										<span class="input-group-text">
 											<i class="fa fa-calendar-check"></i>
 										</span>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">Jenis</label>
-                                <div class="selectgroup w-100">
-                                    <label class="selectgroup-item">
-                                        <input type="radio" name="jenis" id="jenis" value="makanan"
-                                               class="selectgroup-input"
-                                               required>
-                                        <span class="selectgroup-button"><i class="fa fa-cookie"></i> Makanan</span>
-                                    </label>
-                                    <label class="selectgroup-item">
-                                        <input type="radio" name="jenis" id="jenis" value="bumbu"
-                                               class="selectgroup-input"
-                                               required>
-                                        <span class="selectgroup-button"><i class="fa fa-bong"></i> Bumbu</span>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Jenis</label>
+                            <div class="selectgroup w-100">
+                                <label class="selectgroup-item">
+                                    <input type="radio" name="jenis" id="jenis" value="makanan"
+                                           class="selectgroup-input"
+                                           required>
+                                    <span class="selectgroup-button"><i class="fa fa-cookie"></i> Makanan</span>
+                                </label>
+                                <label class="selectgroup-item">
+                                    <input type="radio" name="jenis" id="jenis" value="bumbu"
+                                           class="selectgroup-input"
+                                           required>
+                                    <span class="selectgroup-button"><i class="fa fa-bong"></i> Bumbu</span>
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <label>Pilih Bahan</label>
-                                <div class="select2-input">
-                                    <select id="basic" name="master_barang_id" class="form-control" disabled required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Pilih Bahan</label>
+                            <div class="select2-input">
+                                <select id="basic" name="master_barang_id" class="form-control" disabled required>
 
-                                    </select>
-                                </div>
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label>Jumlah</label>
-                                <input type="number" class="form-control" name="jumlah" id="jumlah" required>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <label>Jumlah</label>
+                            <input type="number" class="form-control" name="jumlah" id="jumlah" required>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="card-footer">
                 <button class="btn btn-success btn-sm" onclick="addToCart()">Tambah Ke Keranjang</button>
-                <a href="" class="btn btn-danger btn-sm">Reset</a>
+                <button class="btn btn-danger btn-sm" onclick="resetVal()">Reset</button>
             </div>
         </div>
         <div class="card">
@@ -65,7 +66,6 @@
                     <table class="table table-head-bg-primary mt-4">
                         <thead>
                         <tr>
-                            <th>#</th>
                             <th>Nama Bahan Makanan</th>
                             <th>Jumlah Pakai</th>
                             <th>Aksi</th>
@@ -76,9 +76,16 @@
                         </tbody>
                     </table>
                 </div>
+
             </div>
             <div class="card-footer">
-                <a href="" class="btn btn-success btn-sm">Simpan</a>
+                <form action="{{route('checkout.save')}}" method="POST">
+                    {{csrf_field()}}
+                    <div id="hidden-input">
+
+                    </div>
+                    <button type="submit" id="simpan_checkout" class="btn btn-success btn-sm">Simpan Checkout</button>
+                </form>
             </div>
         </div>
     </div>
@@ -86,12 +93,26 @@
 
 @section('inline-js')
     <script type="text/javascript">
-        $('#datepicker').datetimepicker(
-            {
-                format: 'DD/MM/YYYY',
-            },
-            'setDate', '15/11/2012',
-        );
+        $(function () {
+            var d = new Date();
+            var month = d.getMonth();
+            var year = d.getFullYear();
+            var date = d.getDate();
+
+            $('#datepicker').datetimepicker(
+                {
+                    format: 'DD/MM/YYYY',
+                },
+            );
+            // $('#datepicker').val((date < 10 ? '0' : '') + date + '/' + (month < 10 ? '0' : '') + month + '/' + year);
+
+            if ($('#hidden-input').children().length == 0){
+                $('#simpan_checkout').attr('disabled', true);
+            } else{
+                $('#simpan_checkout').prop('disabled', false);
+            }
+        })
+
         $('#basic').select2({
             theme: "bootstrap"
         });
@@ -127,33 +148,66 @@
 
         })
         var checkout = [];
+        var no = 1;
 
         function addToCart() {
-            var tmp = {
-                'barang_id': $('#basic').val(),
-                'nama_barang': $('#basic option:selected').text(),
-                'jumlah': $('#jumlah').val()
-            };
-            checkout.push(tmp);
-            var html = '';
-            for (var i = 0; i < checkout.length; i++) {
-                html = '';
-                html += '<tr>\n' +
-                    '                            <td>' + (i + 1) + '</td>\n' +
-                    '                            <td>' + checkout[i].nama_barang + '</td>\n' +
-                    '                            <td>' + checkout[i].jumlah + '</td>\n' +
+            if ($('#basic').val() == '' || $('#jumlah').val() == '') {
+                swal('Perhatian!', 'Inputan belum lengkap', 'warning');
+            } else {
+                var barang_id = $('#basic').val();
+                var nama_barang = $('#basic option:selected').text();
+                var jumlah = $('#jumlah').val();
+                var html = '';
+                var input = '';
+                html += '<tr id= "row' + no + '">\n' +
+                    '                            <td>' + nama_barang + '</td>\n' +
+                    '                            <td>' + jumlah + '</td>\n' +
                     '                            <td>\n' +
-                    '                                <a href=""\n' +
-                    '                                   onclick="return confirm(\'Apakah Anda yakin ingin menghapus data makanan ini?\')"\n' +
-                    '                                   class="btn btn-danger btn-xs" title="Hapus Data"><i class="fa fa-trash"></i></a>\n' +
+                    '                                <button class="btn btn-danger btn-xs" title="Hapus Data" onclick="deleteItem(' + no + ')"><i class="fa fa-trash"></i></button >\n' +
                     '                            </td>\n' +
                     '                        </tr>';
+                input += '<input type="hidden" name="master_barang_id[]" value="' + barang_id + '" id="barang'+no+'"><input type="hidden" name="jumlah[]" value="' + jumlah + '" id="jumlah'+no+'">';
             }
             $('#t-body').append(html);
+            $('#hidden-input').append(input);
+            no++;
+            if ($('#hidden-input').children().length == 0){
+                $('#simpan_checkout').attr('disabled', true);
+            } else{
+                $('#simpan_checkout').prop('disabled', false);
+            }
         }
 
         function deleteItem(row) {
+            var con = swal({
+                title : 'Konfirmasi',
+                text : 'Anda yakin akan menghapus data?',
+                icon : 'warning',
+                buttons :  true,
+                dangerMode: true
+            }).then((willDelete)=> {
+                if (willDelete){
+                    $('#row' + row + '').remove();
+                    $('#barang' + row + '').remove();
+                    $('#jumlah' + row + '').remove();
+                    if ($('#hidden-input').children().length == 0){
+                        $('#simpan_checkout').attr('disabled', true);
+                    } else{
+                        $('#simpan_checkout').prop('disabled', false);
+                    }
+                    swal('Data checkout terhapus!', {
+                        icon: 'success',
+                    })
+                }
+            });
 
+        }
+        
+        function resetVal() {
+            $('#basic').prop('disabled', true);
+            $('#basic').html(
+                '');
+            $('#jumlah').val('');
         }
 
     </script>
