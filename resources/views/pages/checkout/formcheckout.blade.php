@@ -191,7 +191,7 @@
                     $('#barang' + row + '').remove();
                     $('#jumlah' + row + '').remove();
                     if ($('#hidden-input').children().length == 0){
-                        $('#simpan_checkout').attr('disabled', true);
+                        $('#simpan_checkout').attr('disabled', true); 
                     } else{
                         $('#simpan_checkout').prop('disabled', false);
                     }
