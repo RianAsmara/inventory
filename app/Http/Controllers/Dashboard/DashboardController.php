@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Http\Controllers\Dashboard;
+
+use App\MasterBarang;
+use App\StokAkhir;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,7 +17,46 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard.content');
+        $date = Carbon::now();
+        $day = $date->day;
+        $month = $date->month;
+        $year = $date->year;
+        if ($day < 10){
+            $day = '0'.$day;
+        }
+        $previous_month = 0;
+        if ($month == '01'){
+            $previous_month = '12';
+        }else{
+            if ($month < 10){
+                $previous_month = '0'.$month;
+            }else{
+                $previous_month = $month;
+            }
+        }
+
+        if ($day == '01') {
+            $master_barang = MasterBarang::get();
+            foreach ($master_barang as $barang){
+                $data = StokAkhir::where('bulan', '=', $previous_month)->where('tahun', '=', $year)->where('master_barang_id', '=', $barang->id)->get();
+                if (count($data) == 0){
+                    StokAkhir::create([
+                        'bulan' => $previous_month,
+                        'tahun' => $year,
+                        'stok_akhir' => $barang->stok,
+                        'master_barang_id' => $barang->id
+                    ]);
+                }
+            }
+            $makananCount = MasterBarang::where('jenis', '=', 'makanan')->count();
+            $bumbuCount = MasterBarang::where('jenis', '=', 'bumbu')->count();
+            return view('pages.dashboard.content', compact('makananCount', 'bumbuCount'));
+        } else {
+            $makananCount = MasterBarang::where('jenis', '=', 'makanan')->count();
+            $bumbuCount = MasterBarang::where('jenis', '=', 'bumbu')->count();
+            return view('pages.dashboard.content', compact('makananCount', 'bumbuCount'));
+        }
+
     }
 
     /**
@@ -28,7 +72,7 @@ class DashboardController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -39,7 +83,7 @@ class DashboardController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -50,7 +94,7 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -61,8 +105,8 @@ class DashboardController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -73,7 +117,7 @@ class DashboardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

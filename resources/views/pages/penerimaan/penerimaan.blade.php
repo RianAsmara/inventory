@@ -74,7 +74,6 @@
                                     <th>Nama Barang/Bahan   </th>
                                     <th>Kategori</th>
                                     <th>Jumlah</th>
-                                    <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -87,14 +86,6 @@
                                         <td>{{$p->master_barang->nama_barang}}</td>
                                         <td>{{$p->master_barang->kategori}}</td>
                                         <td>{{$p->jumlah}}</td>
-                                        <td>
-                                            {{--<a href="{{route('makanan.edit', $mak->id)}}" class="btn btn-warning btn-xs" title="Update Data"><i--}}
-                                                    {{--class="fa fa-pencil-alt"></i></a>--}}
-                                            {{--<a href="{{route('makanan.delete', $mak->id)}}" onclick="return confirm('Apakah Anda yakin ingin menghapus data makanan ini?')" class="btn btn-danger btn-xs" title="Hapus Data"><i--}}
-                                                    {{--class="fa fa-trash"></i></a>--}}
-                                            <a href="" class="btn btn-primary btn-xs" title="Tambah Stok & Anggaran"><i
-                                                    class="fa fa-pencil-alt"></i></a>
-                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

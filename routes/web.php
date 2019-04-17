@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return View::make('layouts/index');
-});
+Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard');
 
 Route::get('/cart', function () {
     return view('pages.bumbu.test-cart');

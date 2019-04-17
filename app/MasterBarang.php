@@ -15,4 +15,8 @@ class MasterBarang extends Model
     public function checkout(){
         return $this->hasMany(Checkout::class);
     }
+
+    public function stok_akhir(){
+        return $this->hasMany(StokAkhir::class);
+    }
 }

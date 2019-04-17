@@ -99,8 +99,6 @@
                                             onclick="return confirm('Apakah Anda yakin ingin menghapus data makanan ini?')"
                                             class="btn btn-danger btn-xs" title="Hapus Data"><i
                                                 class="fa fa-trash"></i></a>
-                                        <a href="" class="btn btn-primary btn-xs" title="Tambah Stok & Anggaran"><i
-                                                class="fa fa-pencil-alt"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
