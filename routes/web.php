@@ -49,8 +49,6 @@ Route::prefix('checkout')->group(function () {
     Route::get('/checkout', 'Checkout\CheckoutController@index')->name('checkout.index');
     Route::get('/checkout/add', 'Checkout\CheckoutController@create')->name('checkout.create');
     Route::post('/checkout/save', 'Checkout\CheckoutController@store')->name('checkout.save');
-
 });
 
 Route::get('laporan', 'HomeController@cetakLaporan')->name('cetak');
-// Route::get('/pdf', 'YourController@pdfStream')->name('pdfStream');

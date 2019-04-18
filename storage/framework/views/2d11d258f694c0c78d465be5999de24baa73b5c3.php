@@ -69,7 +69,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo e(url('cetak')); ?>">
+                    <a class="nav-link" href="<?php echo e(route('cetak')); ?>">
                         <i class="link-icon icon-printer"></i>
                         <span class="menu-title">Cetak Laporan</span>
                     </a>

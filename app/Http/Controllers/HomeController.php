@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\MasterBarang;
 use PDF;
 
 class HomeController extends Controller
@@ -30,12 +30,12 @@ class HomeController extends Controller
 
     public function cetakLaporan()
     {
-        $data = ['title' => 'Welcome to belajarphp.net'];
+        $data = Checkout::with('master_barang')->where('tanggal_checkout', '=', date('d/m/Y'))->get();
 
         $pdf = PDF::loadView('/laporan/laporan', $data)
             ->setPaper('legal', 'portrait');
         // return $pdf->download('laporan-pdf.pdf');
-        return $pdf->stream();
-        // return view('./laporan/laporan');
+        // return $pdf->stream();
+        return view('./laporan/laporan');
     }
 }

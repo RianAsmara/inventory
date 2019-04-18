@@ -8,15 +8,18 @@ class MasterBarang extends Model
 {
     protected $guarded = [];
 
-    public function penerimaan(){
+    public function penerimaan()
+    {
         return $this->hasMany(Penerimaan::class);
     }
 
-    public function checkout(){
+    public function checkout()
+    {
         return $this->hasMany(Checkout::class);
     }
 
-    public function stok_akhir(){
+    public function stok_akhir()
+    {
         return $this->hasMany(StokAkhir::class);
     }
 }
