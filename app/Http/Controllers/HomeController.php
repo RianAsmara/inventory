@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Checkout;
 use Illuminate\Http\Request;
 use App\MasterBarang;
+use Illuminate\Support\Facades\DB;
 use PDF;
 
 class HomeController extends Controller
@@ -30,12 +32,14 @@ class HomeController extends Controller
 
     public function cetakLaporan()
     {
-        $data = Checkout::with('master_barang')->where('tanggal_checkout', '=', date('d/m/Y'))->get();
+        $kategori = DB::select('select kategori from master_barangs group by kategori');
 
-        $pdf = PDF::loadView('/laporan/laporan', $data)
+
+        $pdf = PDF::loadView('laporan/laporan', compact('kategori'))
             ->setPaper('legal', 'portrait');
         // return $pdf->download('laporan-pdf.pdf');
         // return $pdf->stream();
-        return view('./laporan/laporan');
+        return view('laporan/laporan', compact('kategori'));
+
     }
 }
