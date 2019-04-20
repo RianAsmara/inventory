@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Checkout' => $baseDir . '/app/Checkout.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Customer' => $baseDir . '/app/Customer.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -16,6 +17,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Checkout\\CheckoutController' => $baseDir . '/app/Http/Controllers/Checkout/CheckoutController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\Dashboard\\DashboardController' => $baseDir . '/app/Http/Controllers/Dashboard/DashboardController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\MasterBarang\\BumbuController' => $baseDir . '/app/Http/Controllers/MasterBarang/BumbuController.php',
     'App\\Http\\Controllers\\MasterBarang\\MakananController' => $baseDir . '/app/Http/Controllers/MasterBarang/MakananController.php',
@@ -35,6 +37,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\StokAkhir' => $baseDir . '/app/StokAkhir.php',
     'App\\User' => $baseDir . '/app/User.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
     'Barryvdh\\DomPDF\\PDF' => $vendorDir . '/barryvdh/laravel-dompdf/src/PDF.php',

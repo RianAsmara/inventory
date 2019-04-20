@@ -478,6 +478,7 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
     );
 
     public static $classMap = array (
+        'App\\Checkout' => __DIR__ . '/../..' . '/app/Checkout.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Customer' => __DIR__ . '/../..' . '/app/Customer.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -488,6 +489,7 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Checkout\\CheckoutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Checkout/CheckoutController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Dashboard\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/DashboardController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MasterBarang\\BumbuController' => __DIR__ . '/../..' . '/app/Http/Controllers/MasterBarang/BumbuController.php',
         'App\\Http\\Controllers\\MasterBarang\\MakananController' => __DIR__ . '/../..' . '/app/Http/Controllers/MasterBarang/MakananController.php',
@@ -507,6 +509,7 @@ class ComposerStaticInita2a38bccd96383ea289769dd1bb3f21b
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\StokAkhir' => __DIR__ . '/../..' . '/app/StokAkhir.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
