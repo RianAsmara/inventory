@@ -5,6 +5,7 @@ namespace App\Http\Controllers\MasterBarang;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MasterBarang;
+use Illuminate\Support\Facades\DB;
 
 class MakananController extends Controller
 {
@@ -103,4 +104,15 @@ class MakananController extends Controller
         return redirect()->route('makanan.index');
 
     }
+
+    public function search(Request $request){
+        $key = $request->key;
+        $makanans = MasterBarang::where('jenis', '=', 'makanan')
+            ->where('kategori', 'like', "%" . $key . "%")
+            ->orWhere('nama_barang', 'like', "%" . $key . "%")
+            ->where('jenis', '=', 'makanan')
+            ->paginate(10);
+        return view('pages.makanan.makanan', compact('makanans', 'key'));
+    }
+
 }

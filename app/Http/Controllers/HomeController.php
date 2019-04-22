@@ -25,21 +25,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    // public function index()
-    // {
-    //     return view('home');
-    // }
-
-    public function cetakLaporan()
+    public function index()
     {
-        $kategori = DB::select('select kategori from master_barangs group by kategori');
+        return view('laporan.index');
+    }
 
-
-        $pdf = PDF::loadView('laporan/laporan', compact('kategori'))
-            ->setPaper('legal', 'portrait');
-        // return $pdf->download('laporan-pdf.pdf');
-        // return $pdf->stream();
-        return view('laporan/laporan', compact('kategori'));
-
+    public function cetakLaporan(Request $request)
+    {
+        $jenis = $request->jenis;
+        $bulan = $request->bulan;
+        $tahun = $request->tahun;
+        $kategori = DB::select('select kategori from master_barangs group by kategori order by kategori asc');
+        $pdf = PDF::loadView('laporan/laporan', compact('kategori', 'jenis', 'bulan', 'tahun'))
+            ->setPaper('legal', 'landscape');
+        return $pdf->download('laporan-pdf.pdf');
+        return $pdf->stream();
+//        return view('laporan/laporan', compact('kategori', 'jenis', 'bulan', 'tahun'));
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MasterBarang;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class BumbuController extends Controller
 {
@@ -16,10 +17,8 @@ class BumbuController extends Controller
      */
     public function index()
     {
-        date_default_timezone_set('Asia/Makassar');
-        $start = date('d-m-Y H:i:s');
-        $bumbus =  MasterBarang::where('jenis', '=', 'bumbu')->paginate(10);
-        return view('pages.bumbu.bumbu', compact('bumbus', 'start'));
+        $bumbus = MasterBarang::where('jenis', '=', 'bumbu')->paginate(10);
+        return view('pages.bumbu.bumbu', compact('bumbus'));
     }
 
     /**
@@ -35,7 +34,7 @@ class BumbuController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -47,14 +46,14 @@ class BumbuController extends Controller
             'jenis' => 'bumbu',
         ]);
 
-        session()->put('success','Data bumbu berhasil ditambahkan.');
+        session()->put('success', 'Data bumbu berhasil ditambahkan.');
         return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show(MasterBarang $bumbu)
@@ -65,7 +64,7 @@ class BumbuController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit(MasterBarang $bumbu)
@@ -76,8 +75,8 @@ class BumbuController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, MasterBarang $bumbu)
@@ -88,22 +87,33 @@ class BumbuController extends Controller
             'satuan' => $request->satuan,
         ]);
 
-        session()->put('success','Data bumbu berhasil diupdate.');
+        session()->put('success', 'Data bumbu berhasil diupdate.');
         return redirect()->route('bumbu.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(MasterBarang $bumbu)
     {
         $bumbu->findOrFail($bumbu);
         $status = $bumbu->delete();
-        session()->put('success','Data bumbu berhasil dihapus.');
+        session()->put('success', 'Data bumbu berhasil dihapus.');
         return redirect()->route('bumbu.index');
+    }
+
+    public function search(Request $request)
+    {
+        $key = $request->key;
+        $bumbus = MasterBarang::where('jenis', '=', 'bumbu')
+            ->where('kategori', 'like', "%" . $key . "%")
+            ->orWhere('nama_barang', 'like', "%" . $key . "%")
+            ->where('jenis', '=', 'bumbu')
+            ->paginate(10);
+        return view('pages.bumbu.bumbu', compact('bumbus', 'key'));
     }
 
 }

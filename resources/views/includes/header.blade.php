@@ -70,7 +70,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-social-dropbox"></i>
                         <span class="menu-title">Data Master</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
@@ -86,7 +86,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-calculator"></i>
                         <span class="menu-title">Proses Transaksi</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
@@ -101,7 +101,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cetak') }}">
+                    <a class="nav-link" href="{{ route('cetak.index') }}">
                         <i class="link-icon icon-printer"></i>
                         <span class="menu-title">Cetak Laporan</span>
                     </a>

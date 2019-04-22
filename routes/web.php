@@ -24,6 +24,7 @@ Route::prefix('makanan')->group(function () {
     Route::get('/edit/{makanan}', 'MasterBarang\MakananController@edit')->name('makanan.edit');
     Route::put('/update/{makanan}', 'MasterBarang\MakananController@update')->name('makanan.update');
     Route::get('/delete/{makanan}', 'MasterBarang\MakananController@destroy')->name('makanan.delete');
+    Route::get('/search', 'MasterBarang\MakananController@search')->name('makanan.search');
 });
 
 Route::prefix('bumbu')->group(function () {
@@ -33,6 +34,7 @@ Route::prefix('bumbu')->group(function () {
     Route::get('/edit/{bumbu}', 'MasterBarang\BumbuController@edit')->name('bumbu.edit');
     Route::put('/update/{bumbu}', 'MasterBarang\BumbuController@update')->name('bumbu.update');
     Route::get('/delete/{bumbu}', 'MasterBarang\BumbuController@destroy')->name('bumbu.delete');
+    Route::get('/search', 'MasterBarang\BumbuController@search')->name('bumbu.search');
 });
 
 Route::prefix('penerimaan')->group(function () {
@@ -51,4 +53,5 @@ Route::prefix('checkout')->group(function () {
     Route::post('/checkout/save', 'Checkout\CheckoutController@store')->name('checkout.save');
 });
 
-Route::get('laporan', 'HomeController@cetakLaporan')->name('cetak');
+Route::get('cetak-laporan', 'HomeController@index')->name('cetak.index');
+Route::post('laporan', 'HomeController@cetakLaporan')->name('cetak');
