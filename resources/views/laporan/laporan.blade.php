@@ -170,6 +170,7 @@
                                         ->where('bulan', '=', $bulan_lalu)
                                         ->where('tahun', '=', $tahun)
                                         ->where('master_barangs.kategori', '=', $k->kategori)
+                                        ->where('master_barangs.id', '=', $d->barang_id)
                                         ->first();
                         $penerimaan = DB::table('penerimaans')
                                         ->join('master_barangs', 'penerimaans.master_barang_id', '=', 'master_barangs.id')
@@ -178,9 +179,10 @@
                                         ->where('master_barangs.kategori', '=', $k->kategori)
                                         ->first();
                         $checkouts = DB::table('checkouts')
-                                        ->select('jumlah')
+                                        ->select(DB::raw('SUM(jumlah) as jumlah'), 'tanggal_checkout')
                                         ->where('master_barang_id', '=', $d->barang_id)
                                         ->whereRaw('SUBSTRING(checkouts.tanggal_checkout, 4, 2) = '.$bulan)
+                                        ->groupBy('master_barang_id')
                                         ->orderBy('tanggal_checkout', 'asc')
                                         ->get();
                     @endphp
