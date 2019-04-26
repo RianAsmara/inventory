@@ -101,7 +101,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cetak') }}">
+                    <a class="nav-link" href="{{ route('cetak.index') }}">
                         <i class="link-icon icon-printer"></i>
                         <span class="menu-title">Cetak Laporan</span>
                     </a>

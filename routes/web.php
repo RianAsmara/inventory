@@ -51,4 +51,5 @@ Route::prefix('checkout')->group(function () {
     Route::post('/checkout/save', 'Checkout\CheckoutController@store')->name('checkout.save');
 });
 
-Route::get('laporan', 'HomeController@cetakLaporan')->name('cetak');
+Route::get('cetak-laporan', 'HomeController@index')->name('cetak.index');
+Route::post('laporan', 'HomeController@cetakLaporan')->name('cetak');

@@ -64,8 +64,32 @@
 <body>
 <!-- <page size="A3"> -->
 <div class="row">
-    <h4>DAFTAR : LAPORAN PENGELUARAN BAHAN MAKANAN KERING INSTALASI GIZI</h4>
-    <h4>BULAN : DESEMBER 2018</h4>
+    <h4>DAFTAR : LAPORAN PENGELUARAN BAHAN {{$jenis == 'makanan' ? 'MAKANAN' : 'BUMBU'}} KERING INSTALASI GIZI</h4>
+    @if($bulan == '01')
+        <h4>BULAN : JANUARI {{$tahun}}</h4>
+    @elseif($bulan == '02')
+        <h4>BULAN : FEBRUARI {{$tahun}}</h4>
+    @elseif($bulan == '03')
+        <h4>BULAN : MARET {{$tahun}}</h4>
+    @elseif($bulan == '04')
+        <h4>BULAN : APRIL {{$tahun}}</h4>
+    @elseif($bulan == '05')
+        <h4>BULAN : MEI {{$tahun}}</h4>
+    @elseif($bulan == '06')
+        <h4>BULAN : JUNI {{$tahun}}</h4>
+    @elseif($bulan == '07')
+        <h4>BULAN : JULI {{$tahun}}</h4>
+    @elseif($bulan == '08')
+        <h4>BULAN : AGUSTUS {{$tahun}}</h4>
+    @elseif($bulan == '09')
+        <h4>BULAN : SEPTEMBER{{$tahun}}</h4>
+    @elseif($bulan == '10')
+        <h4>BULAN : OKTOBER {{$tahun}}</h4>
+    @elseif($bulan == '11')
+        <h4>BULAN : NOVEMBER {{$tahun}}</h4>
+    @elseif($bulan == '12')
+        <h4>BULAN : DESEMBER {{$tahun}}</h4>
+    @endif
 </div>
 <div class="row">
     <table border="1" width="100%">
@@ -73,11 +97,11 @@
             <th rowspan="2">No</th>
             <th rowspan="2">Bahan</th>
             <th rowspan="2">Sat.</th>
-            <th rowspan="2">Sisa Bln Lalu</th>
-            <th rowspan="2">Penerimaan Bln Ini</th>
+            <th rowspan="2" style="width: 100px">Sisa Bln Lalu</th>
+            <th rowspan="2" style="width: 80px">Penerimaan Bln Ini</th>
             <th colspan="31" style="text-align:center">Tanggal</th>
             <th rowspan="2">Jml</th>
-            <th rowspan="2">Jml Pakai</th>
+            <th rowspan="2" style="width: 50px">Jml Pakai</th>
             <th rowspan="2">Sisa</th>
         </tr>
         <tr style="text-align:center; font-weight: bold;">
@@ -113,180 +137,80 @@
             <td>30</td>
             <td>31</td>
         </tr>
-        @foreach($kategori as $d)
-            @if($d->kategori == 'A')
-                @php
-                    $data = \App\MasterBarang::with(['checkout' => function ($q){$q->where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->orderBy('tanggal_checkout');}])->where('kategori', '=', 'A')->where('jenis', '=', 'makanan')->get();
-                @endphp
-                <tr>
-                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">A.
-                        Beras/Ketan/Mie/Jagung
-                        DLL
-                    </td>
-                </tr>
-                @foreach($data as $d)
-                    <tr style="text-align:center">
+        @foreach($kategori as $k)
+            @php
+                $data = DB::table('checkouts')
+                         ->join('master_barangs', 'checkouts.master_barang_id', '=', 'master_barangs.id')
+                         ->select('checkouts.id', 'checkouts.tanggal_checkout', 'master_barangs.nama_barang', 'master_barangs.satuan', 'master_barangs.id as barang_id')
+                         ->whereRaw('SUBSTRING(checkouts.tanggal_checkout, 4, 2) ='. $bulan)
+                         ->where('master_barangs.jenis', '=', $jenis)
+                         ->where('master_barangs.kategori', '=', $k->kategori)
+                         ->groupby('checkouts.master_barang_id')->get();
+            @endphp
+            <tr>
+                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                    Beras/Ketan/Mie/Jagung
+                    DLL
+                </td>
+            </tr>
+            @foreach($data as $d)
+                <tr style="text-align:center">
                     <td>{{$loop->iteration}}</td>
                     <td>{{$d->nama_barang}}</td>
                     <td>{{$d->satuan}}</td>
-                    <td>320</td>
-                        @php
-                            $pener = \App\Penerimaan::with(['master_barang' => function ($q){$q->where('id', '=', '1');}])->where(DB::raw("SUBSTRING(tanggal_masuk, 4, 2)"), '=', '04')->first();
-                        @endphp
-                    <td>{{'000'}}</td>
-                        @php
-                            $checkouts = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->get();
-                        @endphp
+                    @php
+                        if ($bulan == 12){
+                            $bulan_lalu = 01;
+                        }else{
+                            $bulan_lalu = $bulan - 01;
+                        }
+                        $stok_akhir = DB::table('stok_akhirs')
+                                        ->join('master_barangs', 'stok_akhirs.master_barang_id', '=', 'master_barangs.id')
+                                        ->select('stok_akhir')
+                                        ->where('bulan', '=', $bulan_lalu)
+                                        ->where('tahun', '=', '2019')
+                                        ->where('master_barangs.kategori', '=', $k->kategori)
+                                        ->first();
+                        $penerimaan = DB::table('penerimaans')
+                                        ->join('master_barangs', 'penerimaans.master_barang_id', '=', 'master_barangs.id')
+                                        ->select('jumlah')
+                                        ->whereRaw('SUBSTRING(penerimaans.tanggal_masuk, 4, 2) = '.$bulan)
+                                        ->where('master_barangs.kategori', '=', $k->kategori)
+                                        ->first();
+                        $checkouts = DB::table('checkouts')
+                                        ->select('jumlah')
+                                        ->where('master_barang_id', '=', $d->barang_id)
+                                        ->whereRaw('SUBSTRING(checkouts.tanggal_checkout, 4, 2) = '.$bulan)
+                                        ->orderBy('tanggal_checkout', 'asc')
+                                        ->get();
+                    @endphp
+                    <td>{{$stok_akhir ? $stok_akhir->stok_akhir : '-'}}</td>
+                    <td>{{$penerimaan ? $penerimaan->jumlah : '-'}}</td>
+                    @if(count($checkouts) < 31)
                         @foreach($checkouts as $c)
                             <td>{{$c->jumlah}}</td>
                         @endforeach
-                        <td>11</td>
-                        <td>{{\App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->sum('jumlah')}}</td>
-                        <td>11</td>
-                    </tr>
-                @endforeach
-            @elseif($d->kategori == 'B')
-                @php
-                    $data = \App\MasterBarang::with(['checkout' => function ($q){$q->where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->orderBy('tanggal_checkout');}])->where('kategori', '=', 'B')->where('jenis', '=', 'makanan')->get();
-
-                @endphp
-                <tr>
-                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">B.
-                        Ini B
-                    </td>
+                        @for($i=0; $i < (31 - count($checkouts)); $i++)
+                            <td>-</td>
+                        @endfor
+                    @else
+                        @foreach($checkouts as $c)
+                            <td>{{$c->jumlah}}</td>
+                        @endforeach
+                    @endif
+                    <td></td>
+                    @php
+                        $stok = $stok_akhir ? $stok_akhir->stok_akhir : 0;
+                        $terima = $penerimaan ? $penerimaan->jumlah : 0;
+                        $jumlah = $stok + $terima;
+                        $pakai = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->barang_id)->orderBy('tanggal_checkout', 'asc')->sum('jumlah');
+                        $sisa = (int)$jumlah - (int)$pakai;
+                    @endphp
+                    <td>{{$pakai}}</td>
+                    <td>{{$sisa}}</td>
                 </tr>
-                @foreach($data as $d)
-                    <tr style="text-align:center">
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama_barang}}</td>
-                        <td>{{$d->satuan}}</td>
-                        <td>320</td>
-                        <td>2500</td>
-                        @php
-                            $checkouts = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->get();
-                        @endphp
-                        @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
-                        @endforeach
-                    </tr>
-                @endforeach
-            @elseif($d->kategori == 'C')
-                @php
-                    $data = \App\MasterBarang::with(['checkout' => function ($q){$q->where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->orderBy('tanggal_checkout');}])->where('kategori', '=', 'C')->where('jenis', '=', 'makanan')->get();
-
-                @endphp
-                <tr>
-                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">C.
-                        Ini C
-                    </td>
-                </tr>
-                @foreach($data as $d)
-                    <tr style="text-align:center">
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama_barang}}</td>
-                        <td>{{$d->satuan}}</td>
-                        <td>320</td>
-                        <td>2500</td>
-                        @php
-                            $checkouts = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->get();
-                        @endphp
-                        @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
-                        @endforeach
-                    </tr>
-                @endforeach
-            @elseif($d->kategori == 'D')
-                @php
-                    $data = \App\MasterBarang::with(['checkout' => function ($q){$q->where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->orderBy('tanggal_checkout');}])->where('kategori', '=', 'D')->where('jenis', '=', 'makanan')->get();
-
-                @endphp
-                <tr>
-                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">D.
-                        Ini D
-                    </td>
-                </tr>
-                @foreach($data as $d)
-                    <tr style="text-align:center">
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama_barang}}</td>
-                        <td>{{$d->satuan}}</td>
-                        <td>320</td>
-                        <td>2500</td>
-                        @php
-                            $checkouts = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->get();
-                        @endphp
-                        @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
-                        @endforeach
-                    </tr>
-                @endforeach
-            @elseif($d->kategori == 'E')
-                @php
-                    $data = \App\MasterBarang::with(['checkout' => function ($q){$q->where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->orderBy('tanggal_checkout');}])->where('kategori', '=', 'E')->where('jenis', '=', 'makanan')->get();
-                @endphp
-                <tr>
-                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">E.
-                        Ini E
-                    </td>
-                </tr>
-                @foreach($data as $d)
-                    <tr style="text-align:center">
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$d->nama_barang}}</td>
-                        <td>{{$d->satuan}}</td>
-                        <td>320</td>
-                        <td>2500</td>
-                        @php
-                            $checkouts = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->id)->orderBy('tanggal_checkout', 'asc')->get();
-                        @endphp
-                        @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
-                        @endforeach
-                    </tr>
-                @endforeach
-            @endif
+            @endforeach
         @endforeach
-        {{--<tr style="text-align:center">--}}
-        {{--<td>1</td>--}}
-        {{--<td>Beras C4</td>--}}
-        {{--<td>Kg</td>--}}
-        {{--<td>320</td>--}}
-        {{--<td>2500</td>--}}
-        {{--<td>11</td>--}}
-        {{--<td>22</td>--}}
-        {{--<td>33</td>--}}
-        {{--<td>44</td>--}}
-        {{--<td>55</td>--}}
-        {{--<td>66</td>--}}
-        {{--<td>77</td>--}}
-        {{--<td>88</td>--}}
-        {{--<td>99</td>--}}
-        {{--<td>100</td>--}}
-        {{--<td>11</td>--}}
-        {{--<td>22</td>--}}
-        {{--<td>33</td>--}}
-        {{--<td>44</td>--}}
-        {{--<td>55</td>--}}
-        {{--<td>66</td>--}}
-        {{--<td>77</td>--}}
-        {{--<td>88</td>--}}
-        {{--<td>99</td>--}}
-        {{--<td>100</td>--}}
-        {{--<td>11</td>--}}
-        {{--<td>22</td>--}}
-        {{--<td>33</td>--}}
-        {{--<td>44</td>--}}
-        {{--<td>55</td>--}}
-        {{--<td>66</td>--}}
-        {{--<td>77</td>--}}
-        {{--<td>88</td>--}}
-        {{--<td>99</td>--}}
-        {{--<td>100</td>--}}
-        {{--<td>100</td>--}}
-        {{--<td>11</td>--}}
-        {{--<td>11</td>--}}
-        {{--<td>11</td>--}}
-        </tr>
     </table>
 </div>
 <!-- </page> -->
