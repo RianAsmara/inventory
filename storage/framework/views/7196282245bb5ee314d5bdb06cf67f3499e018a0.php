@@ -23,11 +23,13 @@
 
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6 col-lg-6">
+                            <div class="col-md-4 col-lg-4">
                                 <div class="form-group">
                                     <label>Nama Bahan Makanan</label>
                                     <input type="text" class="form-control" name="nama_makanan" required value="<?php echo e($makanan->nama_barang); ?>">
                                 </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
                                 <div class="form-group">
                                     <label>Kategori Makanan</label>
                                     <select class="form-control" name="kategori" required>
@@ -38,6 +40,8 @@
                                         <option value="E" <?php echo e($makanan->kategori == 'E' ? 'selected' : ''); ?>>Kategori E</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
                                 <div class="form-group">
                                     <label>Satuan</label>
                                     <select class="form-control" name="satuan" required>
@@ -81,32 +85,37 @@
 
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6 col-lg-6">
+                            <div class="col-md-4 col-lg-4">
                                 <div class="form-group">
                                     <label>Nama Bahan Makanan</label>
                                     <input type="text" class="form-control" name="nama_makanan" required>
                                 </div>
-                                <div class="form-group">
-                                    <label>Kategori Makanan</label>
-                                    <select class="form-control" name="kategori" required>
-                                        <option value="A">Kategori A</option>
-                                        <option value="B">Kategori B</option>
-                                        <option value="C">Kategori C</option>
-                                        <option value="D">Kategori D</option>
-                                        <option value="E">Kategori E</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Satuan</label>
-                                    <select class="form-control" name="satuan" required>
-                                        <option value="Kg">Kg</option>
-                                        <option value="Kaleng">Kaleng</option>
-                                        <option value="Bungkus">Bungkus</option>
-                                        <option value="Botol">Botol</option>
-                                        <option value="Gelas">Gelas</option>
-                                        <option value="Kotak">Kotak</option>
-                                        <option value="Galon">Galon</option>
-                                    </select>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
+                                    <div class="form-group">
+                                            <label>Kategori Makanan</label>
+                                            <select class="form-control" name="kategori" required>
+                                                <option value="A">Kategori A</option>
+                                                <option value="B">Kategori B</option>
+                                                <option value="C">Kategori C</option>
+                                                <option value="D">Kategori D</option>
+                                                <option value="E">Kategori E</option>
+                                            </select>
+                                        </div>
+                            </div>
+                                <div class="col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                                <label>Satuan</label>
+                                                <select class="form-control" name="satuan" required>
+                                                    <option value="Kg">Kg</option>
+                                                    <option value="Kaleng">Kaleng</option>
+                                                    <option value="Bungkus">Bungkus</option>
+                                                    <option value="Botol">Botol</option>
+                                                    <option value="Gelas">Gelas</option>
+                                                    <option value="Kotak">Kotak</option>
+                                                    <option value="Galon">Galon</option>
+                                                </select>
+                                            </div>
                                 </div>
                             </div>
                         </div>

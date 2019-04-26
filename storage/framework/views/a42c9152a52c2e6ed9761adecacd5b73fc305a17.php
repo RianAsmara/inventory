@@ -15,12 +15,6 @@
                                 </span>
                                     Tambah Data
                                 </a>
-                                <a href="<?php echo e(route("cetak")); ?>" class="btn btn-info btn-border btn-round btn-sm mr-2">
-                                <span class="btn-label">
-                                    <i class="fa fa-print"></i>
-                                </span>
-                                    Cetak Data
-                                </a>
                             </div>
                         </div>
                     </div>
