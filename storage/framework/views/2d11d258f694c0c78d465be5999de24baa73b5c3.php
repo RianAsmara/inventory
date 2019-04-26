@@ -9,9 +9,7 @@
             </button>
             <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
             <!-- Logo Header -->
-            <a href="<?php echo e(url('/')); ?>" class="logo d-flex align-items-center">
-                <img src="<?php echo e(asset('img/logo.svg')); ?>" alt="navbar brand" class="navbar-brand">
-            </a>
+            
             <!-- End Logo Header -->
 
             <!-- Navbar Header -->
@@ -38,7 +36,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-social-dropbox"></i>
                         <span class="menu-title">Data Master</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
@@ -54,7 +52,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-calculator"></i>
                         <span class="menu-title">Proses Transaksi</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
@@ -69,7 +67,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo e(route('cetak')); ?>">
+                    <a class="nav-link" href="<?php echo e(route('cetak.index')); ?>">
                         <i class="link-icon icon-printer"></i>
                         <span class="menu-title">Cetak Laporan</span>
                     </a>

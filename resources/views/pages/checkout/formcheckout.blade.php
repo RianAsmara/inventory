@@ -12,8 +12,8 @@
                         <div class="form-group">
                             <label>Tanggal Masuk</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="datepicker" name="tanggal_checkout"
-                                       disabled value="{{date('d/m/Y')}}">
+                                <input type="text" class="form-control" id="datepicker" name="tanggal_checkout">
+                                     {{-- value="{{date('d/m/Y')}}"> --}}
                                 <div class="input-group-append">
 										<span class="input-group-text">
 											<i class="fa fa-calendar-check"></i>
@@ -157,6 +157,7 @@
                 var barang_id = $('#basic').val();
                 var nama_barang = $('#basic option:selected').text();
                 var jumlah = $('#jumlah').val();
+                var tanggal = $('#datepicker').val();
                 var html = '';
                 var input = '';
                 html += '<tr id= "row' + no + '">\n' +
@@ -166,7 +167,7 @@
                     '                                <button class="btn btn-danger btn-xs" title="Hapus Data" onclick="deleteItem(' + no + ')"><i class="fa fa-trash"></i></button >\n' +
                     '                            </td>\n' +
                     '                        </tr>';
-                input += '<input type="hidden" name="master_barang_id[]" value="' + barang_id + '" id="barang'+no+'"><input type="hidden" name="jumlah[]" value="' + jumlah + '" id="jumlah'+no+'">';
+                input += '<input type="hidden" name="tanggal_checkout[]" value="' + tanggal + '" id="tanggal_checkout'+no+'"><input type="hidden" name="master_barang_id[]" value="' + barang_id + '" id="barang'+no+'"><input type="hidden" name="jumlah[]" value="' + jumlah + '" id="jumlah'+no+'">';
             }
             $('#t-body').append(html);
             $('#hidden-input').append(input);
@@ -191,7 +192,7 @@
                     $('#barang' + row + '').remove();
                     $('#jumlah' + row + '').remove();
                     if ($('#hidden-input').children().length == 0){
-                        $('#simpan_checkout').attr('disabled', true); 
+                        $('#simpan_checkout').attr('disabled', true);
                     } else{
                         $('#simpan_checkout').prop('disabled', false);
                     }
@@ -202,7 +203,7 @@
             });
 
         }
-        
+
         function resetVal() {
             $('#basic').prop('disabled', true);
             $('#basic').html(

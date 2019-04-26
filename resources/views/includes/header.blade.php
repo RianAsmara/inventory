@@ -9,9 +9,9 @@
             </button>
             <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
             <!-- Logo Header -->
-            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+            {{-- <a href="{{ url('/') }}" class="logo d-flex align-items-center">
                 <img src="{{asset('img/logo.svg')}}" alt="navbar brand" class="navbar-brand">
-            </a>
+            </a> --}}
             <!-- End Logo Header -->
 
             <!-- Navbar Header -->
@@ -70,7 +70,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-social-dropbox"></i>
                         <span class="menu-title">Data Master</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
@@ -86,7 +86,7 @@
                 </li>
                 <li class="nav-item submenu">
                     <a class="nav-link" href="#">
-                        <i class="link-icon icon-screen-desktop"></i>
+                        <i class="link-icon icon-calculator"></i>
                         <span class="menu-title">Proses Transaksi</span>
                     </a>
                     <div class="navbar-dropdown animated fadeIn">
