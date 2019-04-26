@@ -41,7 +41,8 @@ class CheckoutController extends Controller
         if (count($request->jumlah) > 0) {
             for ($i = 0; $i < count($request->jumlah); $i++) {
                 $status = Checkout::create([
-                    'tanggal_checkout' => date('d/m/Y'),
+                    // 'tanggal_checkout' => date('d/m/Y'),
+                    'tanggal_checkout' => $request->tanggal_checkout[$i],
                     'master_barang_id' => $request->master_barang_id[$i],
                     'jumlah' => $request->jumlah[$i]
                 ]);
@@ -52,7 +53,7 @@ class CheckoutController extends Controller
                     $master->save();
                 }
             }
-        }else{
+        } else {
             session()->put('error', 'Tidak ada data untuk disimpan.');
         }
         session()->put('success', 'Checkout berhasil.');

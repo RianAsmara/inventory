@@ -38,8 +38,8 @@ class HomeController extends Controller
         $kategori = DB::select('select kategori from master_barangs group by kategori order by kategori asc');
         $pdf = PDF::loadView('laporan/laporan', compact('kategori', 'jenis', 'bulan', 'tahun'))
             ->setPaper('legal', 'landscape');
-        return $pdf->download('laporan-pdf.pdf');
+        return $pdf->download('laporan ' . $jenis . ' bulan ' . $bulan . ' tahun ' . $tahun . '.pdf');
         return $pdf->stream();
-//        return view('laporan/laporan', compact('kategori', 'jenis', 'bulan', 'tahun'));
+        //        return view('laporan/laporan', compact('kategori', 'jenis', 'bulan', 'tahun'));
     }
 }

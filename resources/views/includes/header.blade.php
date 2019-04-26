@@ -9,9 +9,9 @@
             </button>
             <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
             <!-- Logo Header -->
-            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+            {{-- <a href="{{ url('/') }}" class="logo d-flex align-items-center">
                 <img src="{{asset('img/logo.svg')}}" alt="navbar brand" class="navbar-brand">
-            </a>
+            </a> --}}
             <!-- End Logo Header -->
 
             <!-- Navbar Header -->
