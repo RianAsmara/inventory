@@ -1,7 +1,6 @@
 @extends('layouts.index')
 @section('title','Cetak Laporan')
 @section('content')
-<<<<<<< HEAD
     <div class="page-inner">
         <div class="row">
             <div class="col">
@@ -99,7 +98,6 @@
             </div>
         </div>
     </div>
-=======
 <div class="page-inner">
     <div class="row">
         <div class="col">
@@ -201,5 +199,4 @@
         </div>
     </div>
 </div>
->>>>>>> 4cea0c234e0ea3b076f0641688cfa7287af461a2
 @endsection

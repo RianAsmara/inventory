@@ -148,10 +148,27 @@
                          ->groupby('checkouts.master_barang_id')->get();
             @endphp
             <tr>
-                <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
-                    Beras/Ketan/Mie/Jagung
-                    DLL
-                </td>
+                @if($k->kategori == 'A')
+                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                        Beras/Ketan/Mie/Jagung/Dll.
+                    </td>
+                @elseif($k->kategori == 'B')
+                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                        Gula/Kopi/Teh/Sirup/Dll.
+                    </td>
+                @elseif($k->kategori == 'C')
+                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                        Minuman/Susu/Dll.
+                    </td>
+                @elseif($k->kategori == 'D')
+                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                       Plastik Rool, Plastik, Kantong Plastik, Sedotan Plastik, Dll.
+                    </td>
+                @elseif($k->kategori == 'E')
+                    <td colspan="39" style="background: #e7eaf6; font-weight:bold; padding-left:10px;">{{$k->kategori}}.
+                        Minyak Goreng, Mentega, Dll.
+                    </td>
+                @endif
             </tr>
             @foreach($data as $d)
                 <tr style="text-align:center">
@@ -168,14 +185,9 @@
                                         ->join('master_barangs', 'stok_akhirs.master_barang_id', '=', 'master_barangs.id')
                                         ->select('stok_akhir')
                                         ->where('bulan', '=', $bulan_lalu)
-<<<<<<< HEAD
-                                        ->where('tahun', '=', '2019')
-                                        ->where('master_barangs.kategori', '=', $k->kategori)
-=======
                                         ->where('tahun', '=', $tahun)
                                         ->where('master_barangs.kategori', '=', $k->kategori)
                                         ->where('master_barangs.id', '=', $d->barang_id)
->>>>>>> 4cea0c234e0ea3b076f0641688cfa7287af461a2
                                         ->first();
                         $penerimaan = DB::table('penerimaans')
                                         ->join('master_barangs', 'penerimaans.master_barang_id', '=', 'master_barangs.id')
@@ -184,43 +196,47 @@
                                         ->where('master_barangs.kategori', '=', $k->kategori)
                                         ->first();
                         $checkouts = DB::table('checkouts')
-<<<<<<< HEAD
-                                        ->select('jumlah')
+                                        ->select(DB::raw('SUM(jumlah) as jumlah'), DB::raw('SUBSTRING(checkouts.tanggal_checkout, 1, 2) as tanggal_checkout'))
                                         ->where('master_barang_id', '=', $d->barang_id)
                                         ->whereRaw('SUBSTRING(checkouts.tanggal_checkout, 4, 2) = '.$bulan)
-=======
-                                        ->select(DB::raw('SUM(jumlah) as jumlah'), 'tanggal_checkout')
-                                        ->where('master_barang_id', '=', $d->barang_id)
-                                        ->whereRaw('SUBSTRING(checkouts.tanggal_checkout, 4, 2) = '.$bulan)
-                                        ->groupBy('master_barang_id')
->>>>>>> 4cea0c234e0ea3b076f0641688cfa7287af461a2
+                                        ->groupBy('tanggal_checkout')
                                         ->orderBy('tanggal_checkout', 'asc')
                                         ->get();
                     @endphp
                     <td>{{$stok_akhir ? $stok_akhir->stok_akhir : '-'}}</td>
                     <td>{{$penerimaan ? $penerimaan->jumlah : '-'}}</td>
-                    @if(count($checkouts) < 31)
+                    @for($i = 01; $i<= 31; $i++)
+                        @php
+                            $date = '';
+                            $value = '-';
+                        @endphp
+                        @if($i < 10 )
+                            @php
+                                $date = '0'.$i;
+                            @endphp
+                        @else
+                            @php
+                                $date = $i;
+                            @endphp
+                        @endif
+
                         @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
+                            @if($c->tanggal_checkout == $date)
+                                @php
+                                    $value = $c->jumlah;
+                                @endphp
+
+                            @endif
                         @endforeach
-                        @for($i=0; $i < (31 - count($checkouts)); $i++)
-                            <td>-</td>
-                        @endfor
-                    @else
-                        @foreach($checkouts as $c)
-                            <td>{{$c->jumlah}}</td>
-                        @endforeach
-                    @endif
+                        <td>{{$value}}</td>
+                    @endfor
                     <td></td>
                     @php
                         $stok = $stok_akhir ? $stok_akhir->stok_akhir : 0;
                         $terima = $penerimaan ? $penerimaan->jumlah : 0;
                         $jumlah = $stok + $terima;
-<<<<<<< HEAD
                         $pakai = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', '04')->where('master_barang_id', '=', $d->barang_id)->orderBy('tanggal_checkout', 'asc')->sum('jumlah');
-=======
                         $pakai = \App\Checkout::where(DB::raw("SUBSTRING(tanggal_checkout, 4, 2)"), '=', $bulan)->where('master_barang_id', '=', $d->barang_id)->orderBy('tanggal_checkout', 'asc')->sum('jumlah');
->>>>>>> 4cea0c234e0ea3b076f0641688cfa7287af461a2
                         $sisa = (int)$jumlah - (int)$pakai;
                     @endphp
                     <td>{{$pakai}}</td>
